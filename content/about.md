@@ -1,21 +1,21 @@
----
-title: "About"
-date: 2023-04-21T08:04:36-04:00
-draft: true
----
++++
+title = "About"
+date = "2014-04-09"
+aliases = ["about-us","about-hugo","contact"]
+hideTitle = true
+hidelanguage = true
+[ author ]
+  name = "Hugo Authors"
++++
 
-# Hi there
+Hugo is the **world’s fastest framework for building websites**. It is written in Go.
 
-My name is Radek and I'm the author of this theme. I made it to help you present your ideas easier.
+It makes use of a variety of open source projects including:
 
-We all know how hard is to start something on the web, especially these days. You need to prepare a bunch of stuff, configure them and when that’s done — create the content.
+* https://github.com/russross/blackfriday
+* https://github.com/alecthomas/chroma
+* https://github.com/muesli/smartcrop
+* https://github.com/spf13/cobra
+* https://github.com/spf13/viper
 
-This theme is pretty basic and covers all of the essentials. All you have to do is start typing!
-
-The theme includes:
-
-- **light/dark mode**, depending on your preferences
-- great reading experience thanks to [**Inter UI font**](https://rsms.me/inter/), made by [Rasmus Andersson](https://rsms.me/about/)
-- nice code highlighting thanks to [**PrismJS**](https://prismjs.com)
-
-So, there you have it... enjoy!
+Learn more and contribute on [GitHub](https://github.com/gohugoio).

@@ -1,2 +1,8 @@
 public/
 resources/
+.DS_Store
+config_old.toml
+.hugo_build.lock
+
+# Local Netlify folder
+.netlify

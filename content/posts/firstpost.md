@@ -1,5 +1,5 @@
 +++
-title = "(Hu)go First Post"
+title = "Hugo First Post"
 description = "Helllo"
 type = ["posts","post"]
 tags = [
@@ -16,7 +16,7 @@ categories = [
 ]
 series = ["Hugo 101"]
 [ author ]
-  name = "Rob"
+  name = "10x"
 +++
 
 Hugo uses the excellent [Go][] [html/template][gohtmltemplate] library for

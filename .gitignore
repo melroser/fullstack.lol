@@ -3,6 +3,8 @@ resources/
 .DS_Store
 config_old.toml
 .hugo_build.lock
+node_modules
+package-lock.json
 
 # Local Netlify folder
 .netlify

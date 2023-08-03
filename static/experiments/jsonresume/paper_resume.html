@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  <title>Robert Melrose</title>
+  <link href='//fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <style>body, html {
+  padding-top:2.5em;
+  margin:0;
+  background-color:#fafafa;
+}
+
+.note {
+  display:block;
+  position: absolute;
+  top:10px;
+  left:10px;
+
+  font-family: "Open Sans";
+  font-size: 0.6em;
+}
+
+.new {
+  background-color: #81C784;
+
+  border: 1px solid #757575;
+  padding: 1px;
+  border-radius: 4px;
+
+}
+
+/* Header */
+
+header {
+  width:100%;
+  vertical-align: middle;
+  text-align: center;
+ 
+}
+
+.header-content {
+  display: inline-block;
+}
+
+.pic {
+  margin: 0 auto;
+  margin-top:-2.5em;
+  
+  border-radius:10em;
+  height:4em;
+  width:4em;
+  
+  border: 2px solid #e0e0e0;
+  transition : all 0.5s linear;
+  
+}
+
+@-webkit-keyframes wiggle {
+  0%   {
+    transform: rotate(0deg);
+  }
+  25%  {
+    transform: rotate(-30deg);
+  }
+  50%  {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.pic:hover {
+  /*Webkit fix*/
+  -webkit-transform: translateZ(0);
+  
+  cursor:pointer;
+  
+  -webkit-animation: wiggle 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.header-text {
+  margin-top:0.5em;
+  margin-left:1em;
+}
+
+header p {
+  text-align:center;
+  font-family: "Merriweather";
+  
+  margin:0;
+  
+  color: #212121;
+}
+
+.first-name {
+   font-size: 1.05em;
+}
+
+.subtitle {
+  font-family: "Merriweather";
+  padding-top:.3em;
+  font-size:0.55em;
+  font-weight:500;
+  color: #424242;
+}
+
+/* Information */
+
+.paper {
+  margin: 0 auto;
+  margin-bottom:1em;
+  
+  background-color:white;
+  width:60%;
+  
+  padding:0.5em 0 0.5em 0;
+  
+  border-top: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 3px solid #e0e0e0;
+  border-radius:3px;
+}
+
+@media(max-width:992px) {
+  .paper {
+    width:80%;
+  }
+}
+
+/* Content Part */
+
+.content-wrapper {
+  padding-right:7.25%;
+}
+
+.content {
+  display:table;
+  width:100%;
+  
+  padding-top:1.5em;
+  
+  /*border-top: 1px solid #eeeeee;*/
+}
+
+.content:last-child {
+  margin-bottom: 2em;
+}
+
+body > div > article > div > section:last-child {
+  padding-bottom:1.5em;
+}
+
+.row {
+    display:table-row;
+}
+.row div {
+    display:table-cell;
+}
+
+.content-cat {
+  font-family: "Merriweather";
+  font-variant:small-caps;
+  font-weight:300;
+  letter-spacing: 1px;
+  
+  color: #212121;
+  
+  font-size:0.975em;
+  
+  text-align:center;
+  vertical-align:middle;
+
+  padding-left:6.66%;
+  width:30%;
+}
+
+.content-cat p {
+  font-size:0.55em;
+  font-weight:600;
+  
+  margin-bottom:0;
+}
+
+.content-text {
+  border-left:1px solid #e0e0e0;
+  transition: border 0.66s ease-in;
+}
+
+.big-text {
+  vertical-align:top;
+}
+
+.content-text ul {
+  padding:0;
+  margin:0;
+  margin-top:0.15em;
+  
+  width:85%;
+  margin-left:1.5em;
+}
+
+.content-text ul:last-child {
+  margin-bottom:0.5em;
+}
+
+.content-text ul li {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  
+  display:inline-block;
+  
+}
+
+.content-text ul li:first-child {
+  width:35%;
+  
+  color: #424242;
+  
+  font-weight:600;
+}
+
+.content-text ul li a, div.content-text.work-listing.education-listing > p > strong > a {
+  text-decoration: none;
+  color: #0277bd;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.work-listing p {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  
+  color: #424242;
+  
+  margin-left:2em;
+  margin-top:0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.work-listing.education-listing > p:nth-child(2) {
+  margin-top:0.25em;
+}
+
+.work-listing .highlight {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+  
+  color: #424242;
+  
+  margin-left:3.25em;
+  
+  list-style-type: disc;
+  list-style-position: inside;
+  display: list-item;
+  
+}
+
+.education-listing > .heading {
+  font-weight:600;
+  
+  margin-top:0.75em;
+  margin-left:2em;
+}
+
+.education-listing > .highlight {
+  margin-left:3.25em;
+}
+
+.highlight {
+  transition: border .33s ease-in;
+}
+
+.profiles-listing ul li, .profiles-listing ul li:first-child {
+  width:32%;
+  font-weight: normal;
+}
+
+.work-content, .education-content {
+  padding-top: .75em;
+  page-break-inside: avoid;
+}
+
+section.content.education-content > div > div.content-cat {
+  vertical-align: top;
+}
+
+div.content-text.skills-listing > p {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+
+  margin-left: 2em;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.skills-listing > p > {
+  color:#212121;
+}
+
+@media screen and (max-width: 600px) {
+  body, html {
+    padding-top: 30px;
+  }
+
+  .paper {
+    width:95%;
+  }
+
+  .row div {
+    display: block;
+  }
+
+  .content-cat {
+    width: 100%;
+  }
+
+  .content-text ul li {
+    width: 100%;
+  }
+
+  .content-text ul li:first-child {
+    width: 100%;
+  }
+  
+  .education-listing > .highlight {
+    margin-left: 30px;
+  }
+}
+</style>
+  <style media="print">
+body, html {
+  background-color: white;
+  padding-top: 1.5em;
+  font-size: 104%;
+}
+
+.paper {
+  width:100%;
+  border: 0;
+
+  padding-top: 0;
+}
+
+header p {
+  font-size: 1.3em;
+}
+
+.subtitle {
+  font-size: 0.7em;
+}
+
+.header-pic {
+  float:left;
+}
+
+.profiles {
+  display:none;
+}
+
+.content {
+  page-break-inside:avoid; 
+  page-break-after:auto;
+}
+
+.header-text {
+  float:left;
+  margin-top: -1.6em;
+}
+
+.content-wrapper > .content:first-child {
+  padding-top: 2em;
+}
+
+.content:last-child {
+  padding-bottom: 0;
+}
+
+.content-cat {
+  width:33%;
+  color:black;
+  text-align: left;
+}
+
+.content-cat p {
+  font-size:0.6em;
+  font-weight: 600;
+}
+
+header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
+  color:black;
+}
+
+.content-text.skills-listing > ul > li span, .subtitle {
+  color:#212121;
+}
+
+.content-text ul:last-child {
+  margin-bottom: 0.25em;
+}
+
+.content-text ul li:first-child {
+  width:50%;
+}
+
+.profiles-listing ul li:first-child {
+  width:32%;
+}
+
+div.content-text.skills-listing > ul > li {
+  width:33%;
+}
+
+.work-listing p {
+  margin-bottom: 0.1em;
+}
+
+div.content-text.skills-listing > ul > li > p {
+  margin-top: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+div.content-text.skills-listing > ul > li {
+  padding-left: 1.5em;
+}
+
+div.content-text.skills-listing > ul > li:first-child {
+  padding-left: 2em;
+}
+
+.note {
+  display:none;
+}
+
+.content-text:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.big-text {
+  padding-top: 0;
+}
+</style>
+</head>
+<body>
+  <div class="resume-wrapper">
+    <article class="paper">
+        <header>
+          <div class="header-content">
+            <div class="header-text">
+              <p>
+                Robert Melrose
+              </p>
+              <p class="subtitle">Laziness is the Mother of Innovation</p>
+            </div>
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <!-- CONTACT -->
+          <section class="content">
+            <div class="row">
+              <div class="content-cat">
+                Contact
+              </div>
+              <div class="content-text">
+                  <ul>
+                    <li>Email</li>
+                    <li><a href="mailto:themelroser@gmail.com">themelroser@gmail.com</a></li>
+                  </ul>
+                  <ul>
+                    <li>Phone</li>
+                    <li>3037187583</li>
+                  </ul>
+              </div>
+            </div>
+          </section>
+
+              <section class="content">
+                <div class="row">
+                  <div class="content-cat">
+                    Location
+                  </div>
+                  <div class="content-text">
+                      <ul>
+                        <li>Address</li>
+                        <li>145 SW 13th Street Unit 248
+Miami FL 33130</li>
+                      </ul>
+                  </div>
+                </div>
+              </section>
+
+          <section class="content">
+            <div class="row">
+              <div class="content-cat">
+                Professional Skills Summary
+              </div>
+              <div class="content-text skills-listing">
+                  <p>
+                    <span class="name">
+                        <strong>
+                          ASP.NET Core:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Entity Framework:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          AngularJS:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Web Development:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Ruby:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Java:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Mac OS X:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Programming:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          C#:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Microsoft SQL Server:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          jQuery:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          C (Programming Language):
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          JavaScript:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Software Engineering:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Program Development:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Visual Studio:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Parallel Computing:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Red Hat Linux:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Perl:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          SharePoint:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Git:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Python:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Windows:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          ASP.NET MVC:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          C:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Web Services:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          JSON:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Domain Modeling:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Bash:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Mobile Applications:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Computer Security:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Object Oriented Design:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Parallel Programming:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Linux:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          User Experience:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Unix:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Network Security:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Web Applications:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Eclipse:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          ASP.NET:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Entity Framework (EF) Core:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          C++:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Software Development:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Software:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Software Quality Assurance:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Vim:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Representational State Transfer (REST):
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          .NET:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Subversion:
+                        </strong>
+                    </span>
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Software Documentation:
+                        </strong>
+                    </span>
+                  </p>
+              </div>
+            </div>
+          </section>
+
+
+        
+                <section class="content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                        Work  Experience
+                          <p>2015-06-30 to 2022-12-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Engineer II:</strong>
+                        </p>
+                        <p>I was promoted to the role of Engineer II.
+
+I left Accelya Group in December of 2022.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2020-07-31 to 2022-07-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Engineer:</strong>
+                        </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2018-12-31 to 2020-07-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Software Engineer:</strong>
+                        </p>
+                        <p>I worked on building a small platform of .NET applications. Farelogix was purchased by Accelya Group in the summer of 2020. During this time I was the technical lead of a small platform of applications. I trained 2 interns/junior developers to work with me on maintaining and expanding the capabilities of the platform. I was eventually promoted to Engineer II in Summer of 2022.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2015-06-30 to 2018-12-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Junior Software Engineer:</strong>
+                        </p>
+                        <p>Started out as a backend C++ developer for my first 2 years.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2015-03-31 to 2015-06-30</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Contract Software Engineer:</strong>
+                        </p>
+                        <p>Contract to hire via with the company Farelogix.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2012-06-30 to 2014-11-30</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Software Engineer:</strong>
+                        </p>
+                        <p>Software Engineer working for the reliability department. Majority of work was in Python but also used C++, Java and application development in .NET.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2011-06-30 to 2012-10-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Web Developer:</strong>
+                        </p>
+                        <p>Building and maintaining College of Business Website. My first experience working in .NET. This was SharePoint development. Making these things called Web Parts (I suppose looking back they were something in-between an SPA and an iFrame). You could write a part of a UI like a form for user input and it would use C# logic to do something. Then you could drop this widget wherever you wanted on the site. I did some WCF console applications. It was also my first experience with version control specifically TFS. Eventually I was promoted to Team Lead where I gained a little leadership experience delegating tasks to co-workers.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2011-05-31 to 2012-10-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Web Developer:</strong>
+                        </p>
+                        <p>Back-end web development, form development, designing and consuming REST Web Services, SharePoint development, making and deploying web parts that interfaced with a database and created cross-platform mobile web apps using jQuery.
+
+Languages used: C#, Asp.Net, java script, jQuery and jQuery mobile.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2007-01-31 to 2010-08-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Lead Tape Operator:</strong>
+                        </p>
+                        <p>Worked for OAO (now Pomeroy) doing near-line storage. began as a tape operator was eventually promoted to lead .
+
+Managed a team of about 10 tape operators and performed various other managerial duties.</p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                        Education
+                          <p>2008-12-31 to 2018-12-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p style="margin-top:0;" class="heading">Colorado State University</p>
+                        <p class="highlight">
+                          Bachelor&#x27;s degree:
+                          <i>Computer Science </i>
+                        </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content education-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p style="margin-top:0;" class="heading">Colorado Mountain College</p>
+                        <p class="highlight">
+                          Associate of Arts - AA:
+                          <i>Photography </i>
+                        </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content education-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2007-12-31 to 2009-12-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p style="margin-top:0;" class="heading">Colorado Mountain College</p>
+                        <p class="highlight">
+                          Associate&#x27;s degree:
+                          <i>General Studies </i>
+                        </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content education-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2001-12-31 to 2007-12-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p style="margin-top:0;" class="heading">Silver Creek Highschool</p>
+                        <p class="highlight">
+                          High School Diploma:
+                          <i>General Studies </i>
+                        </p>
+                    </div>
+                  </div>
+                </section>
+
+
+            <section class="content">
+              <div class="row">
+                <div class="content-cat">
+                  Languages
+                </div>
+                <div class="content-text">
+                    <ul>
+                        <li>English</li>
+                        <li>Native Speaker</li>
+                    </ul>
+                </div>
+              </div>
+            </section>
+
+
+
+
+            <!-- PROFILES -->
+              <section class="content profiles">
+                <div class="row">
+                  <div class="content-cat">
+                    Profiles
+                  </div>
+                  <div class="content-text profiles-listing">
+                    <ul>
+                          <li>
+                            <a href="https://www.linkedin.com/in/themelroser/" target="_blank">
+                              LinkedIn
+                            </a>
+                          </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+
+        </div>
+    </article>
+  </div>
+</body>
+</html>

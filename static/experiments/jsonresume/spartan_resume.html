@@ -1,0 +1,1133 @@
+<!doctype html>
+<html>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title>Robert Melrose</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
+	<style>
+		/********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Custom reset */
+.main-summary p,
+#publications .item,
+#skills .item,
+#languages .item,
+#references .item,
+#interests .item{
+	margin: 0;
+}
+
+
+/****************
+*		SMARTPHONES
+****************/
+em {
+	color: #757575;
+}
+p {
+	margin: 1em 0;
+}
+blockquote {
+	margin: 0;
+	margin-bottom: 1em;
+}
+strong {
+	font-weight: 700;
+	font-size: 1.1em;
+}
+ul {
+	margin-top: 1em;
+}
+div.item {
+	margin: 1em 0 2em;
+	padding-bottom: 2em;
+}
+div.item:last-of-type {
+	margin: 0;
+	border-bottom: none;
+	padding-bottom: 0;
+}
+p {
+	text-align: justify;
+}
+
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+h1 {
+	font-size: 2.5rem;
+}
+h2,
+h3 {
+	font-size: 1rem;
+}
+a {
+	color: #EB5F51;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+/* Layout */
+body {
+	background: #f2f2f2;
+	line-height: 1.6;
+	font-size: 13px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#resume {
+	padding: 1rem 0;
+	margin: 1rem auto;
+}
+
+#header {
+	padding: 0 1em;
+	margin-bottom: 1em;
+}
+
+#resume > header div {
+	display: table;
+	padding-left: 0.5em;
+}
+
+#resume > header div.middle {
+	padding-top: 1.5em;
+}
+
+header img {
+	display: block;
+	width: 10em;
+	border-radius: 0.275em;
+	float: right;
+}
+
+header .name {
+	line-height: 1;
+}
+
+header .label {
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: #757575;
+}
+
+section:not(.section) {
+	padding: .5em 1rem;
+}
+
+section#references {
+	border-bottom:none;
+}
+
+section#basics {
+	background: inherit;
+	margin-bottom: 0;
+}
+
+section#skills {
+	padding-bottom: 0;
+}
+
+section#education,
+section#work,
+.main-summary section {
+	padding-bottom: 1em;
+}
+
+header::after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+
+h2.section-title {
+	text-align: left;
+	font-size: 1rem;
+	font-weight: 400;
+	color: #757575;
+	padding: 1em 1rem 0;
+	margin-bottom: 0.1275em;
+}
+
+.date {
+	font-weight: 700;
+	color: #757575;
+}
+
+.position, .area, .institution {
+	font-weight: 700;
+}
+
+#interests .item, #languages .item {
+	padding: 0 1em 1em 0;
+	border-bottom: none;
+}
+
+.website::before {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-decoration: none;
+	min-width: 1.25em;
+	margin-right: 0.25em;
+	text-align: center;
+	content: '\f14c';
+}
+
+#profiles, #skills, #interests, #languages {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+  padding-bottom: 1em;
+}
+
+#profiles, #location {
+	box-shadow: none;
+	padding: 0;
+}
+
+#profiles .item {
+	margin: 0;
+	padding: 0;
+	padding-right: 1em;
+	border-bottom: none;
+}
+
+#interests ul {
+	margin-top: 0.5em;
+}
+
+#publications .name {
+	font-style: italic;
+}
+
+.courses li, .keywords li{
+	display: inline-block;
+	background: #f0f0f0;
+	font-size: 0.9em;
+	line-height: 1;
+	color: #333;
+	padding: 0.4em 0.8em;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-radius: 3px;
+}
+
+#publications .date {
+	font-weight: normal;
+	color: #000;
+}
+
+#skills .item {
+	min-width: 15em;
+	padding: 0 .5em .8em 0;
+	border-bottom: none;
+}
+
+
+/* Skills chart */
+#skills .level .bar {
+	border: 1px solid #ddd;
+	display: block;
+	width: 10em;
+	height: 5px;
+	margin: 0em 0 1em 0;
+	position: relative;
+}
+
+#skills .level .bar::after {
+	position: absolute;
+	content: " ";
+	top: 0;
+	left: 0;
+	background: black;
+	height: 5px;
+}
+
+#skills .level.beginner .bar::after {
+	background: #EB5F51;
+	width: 2.5em;
+}
+
+#skills .level.intermediate .bar::after {
+	background: #ffdf1f;
+	width: 5em;
+}
+
+#skills .level.advanced .bar::after {
+	background: #59C596;
+	width: 7.5em;
+}
+
+#skills .level.master .bar::after {
+	background: #5CB85C;
+	width: 10em;
+}
+
+#references .item {
+	padding-left: 1em;
+	border-left: 5px solid #EB5F51;
+}
+
+.fa.social {
+	margin-right: 0.25em;
+	font-size: 1.1em;
+}
+
+/* Social Media Brand Colors */
+.google-plus {
+	color: #dd4b39;
+}
+
+.tumblr {
+	color:#32506d;
+}
+
+.foursquare {
+	color:  #0072b1;
+}
+
+.facebook {
+	color: #3b5998;
+}
+
+.linkedin {
+	color: #007bb6;
+}
+
+.pinterest {
+	color: #cb2027;
+}
+
+.dribbble {
+	color: #ea4c89;
+}
+
+.instagram {
+	color: #517fa4;
+}
+
+.twitter {
+	color: #00aced;
+}
+
+.soundcloud {
+	color: #ff3a00;
+}
+
+.wordpress {
+	color: #21759b;
+}
+
+.youtube {
+	color: #bb0000;
+}
+
+.github {
+	color: #171515;
+}
+
+.stack-overflow {
+	color: #828386;
+	position: relative;
+}
+
+.flickr {
+	color: #ff0084;
+}
+
+.stack-overflow::after {
+	position: absolute;
+	left: 0;
+	content: '\f16c';
+	color: #f68a1f;
+	overflow: hidden;
+	height: 40%;
+}
+
+/******************
+*		HELPER CLASSES
+******************/
+.fa {
+	min-width: 1.25em;
+	margin-right: 0.25em;
+	text-align: center;
+}
+
+.clear {
+	display: table;
+	clear: both;
+}
+
+
+/****************
+*		TABLET
+****************/
+@media screen and (min-width: 602px) {
+
+	#resume {
+		width: 550px;
+		margin: 0 auto;
+	}
+	section > header > h3 {
+		float:left;
+	}
+	section > header > .date {
+		float: right;
+		line-height: 1.3;
+	}
+
+}
+
+
+/****************
+*		LAPTOP
+****************/
+@media screen and (min-width: 1025px) {
+
+	#resume {
+		width: 650px;
+		padding: 3em;
+		margin: 3em auto;
+		background: #fff;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+	}
+
+	.section {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		margin-bottom: 1em;
+		margin-top: 1em;
+		border-bottom: 1px solid #eee;
+	}
+
+	.section:last-of-type {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+
+	section > header {
+		line-height: 1;
+		padding-bottom: 1em;
+	}
+
+	h2.section-title {
+		line-height: 1.1;
+		padding-top: 0;
+	}
+
+	section:not(.section) {
+		width: 34.5em;
+		padding: 0 1em 1em 0;
+		margin-top:0;
+		border: none;
+	}
+
+	section p {
+		margin: 0;
+	}
+
+	section#basics {
+		width: auto;
+		padding-top: 1em;
+		padding-left: 1em;
+		padding-bottom: 0;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+	}
+
+	#profiles .item{
+		padding-bottom: 1em;
+	}
+
+	div {
+		padding: 0;
+	}
+
+	#skills .item {
+		padding-left:0;
+		margin-top: 0;
+	}
+
+	div.item {
+		margin-top: 0;
+		border-bottom: 1px solid #eee;
+	}
+
+}
+
+	</style>
+
+
+	<body>
+		<div id="resume">
+				<header id="header">
+						<div>
+							<h1 class="name">Robert Melrose</h1>
+							<h2 class="label">Laziness is the Mother of Innovation</h2>
+						</div>
+
+				</header>
+
+				<section id="basics">
+
+						<div id="location">
+							<span class="fa fa-map-marker"></span>
+							<span class="address">
+								145 SW 13th Street Unit 248
+Miami FL 33130,
+							</span>
+							<span class="countryCode">
+								(US),
+							</span>
+						</div>
+
+					<div id="contact">
+						<div class="email">
+							<span class="fa fa-envelope"></span>
+							<a href="mailto:themelroser@gmail.com">themelroser@gmail.com</a>
+						</div>
+						<div class="phone">
+							<span class="fa fa-phone-square"></span>
+							3037187583
+						</div>
+					</div>
+
+
+					<div id="profiles">
+						<div class="item">
+							<span class="network fa fa-linkedin linkedin"></span>
+							<span class="username">
+								<span class="url">
+									<a href="https://www.linkedin.com/in/themelroser/">themelroser</a>
+								</span>
+							</span>
+						</div>
+					</div>
+				</section>
+
+				<section class="section main-summary">
+					<h2 class='section-title'>About</h2>
+					<section>
+						<p>I've been working in software for over a decade mostly web related technologies.
+
+I love to learn. I thrive in working environments where I'm learning something new or mastering a craft.
+
+Opportunities in the city of Miami (Ideally in Brickell or Downtown) will be given preference. I'm also open to fully remote positions but would prefer having a hybrid option to come into an office when need arises.</p>
+					</section>
+				</section>
+
+				</section>
+
+				<section class="section">
+					<h2 class='section-title'>Experience</h2>
+					<section id="work">
+							<div class="date">
+								<span class="startDate">
+									June 2015
+								</span>
+								<span class="endDate">
+									- December 2022
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Engineer II
+						</div>
+						<div class="summary">
+							<p>I was promoted to the role of Engineer II.
+
+I left Accelya Group in December of 2022.</p>
+						</div>
+					</div>
+							<div class="date">
+								<span class="startDate">
+									July 2020
+								</span>
+								<span class="endDate">
+									- July 2022
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Engineer
+						</div>
+					</div>
+							<div class="date">
+								<span class="startDate">
+									December 2018
+								</span>
+								<span class="endDate">
+									- July 2020
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Software Engineer
+						</div>
+						<div class="summary">
+							<p>I worked on building a small platform of .NET applications. Farelogix was purchased by Accelya Group in the summer of 2020. During this time I was the technical lead of a small platform of applications. I trained 2 interns/junior developers to work with me on maintaining and expanding the capabilities of the platform. I was eventually promoted to Engineer II in Summer of 2022.</p>
+						</div>
+					</div>
+							<div class="date">
+								<span class="startDate">
+									June 2015
+								</span>
+								<span class="endDate">
+									- December 2018
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Junior Software Engineer
+						</div>
+						<div class="summary">
+							<p>Started out as a backend C++ developer for my first 2 years.</p>
+						</div>
+					</div>
+							<div class="date">
+								<span class="startDate">
+									March 2015
+								</span>
+								<span class="endDate">
+									- June 2015
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Contract Software Engineer
+						</div>
+						<div class="summary">
+							<p>Contract to hire via with the company Farelogix.</p>
+						</div>
+					</div>
+							<div class="date">
+								<span class="startDate">
+									June 2012
+								</span>
+								<span class="endDate">
+									- November 2014
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Software Engineer
+						</div>
+						<div class="summary">
+							<p>Software Engineer working for the reliability department. Majority of work was in Python but also used C++, Java and application development in .NET.</p>
+						</div>
+					</div>
+							<div class="date">
+								<span class="startDate">
+									June 2011
+								</span>
+								<span class="endDate">
+									- October 2012
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Web Developer
+						</div>
+						<div class="summary">
+							<p>Building and maintaining College of Business Website. My first experience working in .NET. This was SharePoint development. Making these things called Web Parts (I suppose looking back they were something in-between an SPA and an iFrame). You could write a part of a UI like a form for user input and it would use C# logic to do something. Then you could drop this widget wherever you wanted on the site. I did some WCF console applications. It was also my first experience with version control specifically TFS. Eventually I was promoted to Team Lead where I gained a little leadership experience delegating tasks to co-workers.</p>
+						</div>
+					</div>
+							<div class="date">
+								<span class="startDate">
+									May 2011
+								</span>
+								<span class="endDate">
+									- October 2012
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Web Developer
+						</div>
+						<div class="summary">
+							<p>Back-end web development, form development, designing and consuming REST Web Services, SharePoint development, making and deploying web parts that interfaced with a database and created cross-platform mobile web apps using jQuery.
+
+Languages used: C#, Asp.Net, java script, jQuery and jQuery mobile.</p>
+						</div>
+					</div>
+							<div class="date">
+								<span class="startDate">
+									January 2007
+								</span>
+								<span class="endDate">
+									- August 2010
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Lead Tape Operator
+						</div>
+						<div class="summary">
+							<p>Worked for OAO (now Pomeroy) doing near-line storage. began as a tape operator was eventually promoted to lead .
+
+Managed a team of about 10 tape operators and performed various other managerial duties.</p>
+						</div>
+					</div>
+					</section>
+				</section>
+
+				<section class="section">
+					<h2 class='section-title'>Education</h2>
+					<section id="education">
+							<header>
+									<h3 class="institution">
+										Colorado State University
+									</h3>
+								<div class="date">
+									<span class="startDate">
+										2008
+									</span>
+									<span class="endDate">
+										- 2018
+									</span>
+								</div>
+							</header>
+							<div class="item">
+									<div class="studyType">
+										Bachelor&#x27;s degree
+									</div>
+									<div class="area">
+										Computer Science
+									</div>
+							</div>
+							<header>
+									<h3 class="institution">
+										Colorado Mountain College
+									</h3>
+								<div class="date">
+									<span class="startDate">
+										2007
+									</span>
+									<span class="endDate">
+										- Present
+									</span>
+								</div>
+							</header>
+							<div class="item">
+									<div class="studyType">
+										Associate of Arts - AA
+									</div>
+									<div class="area">
+										Photography
+									</div>
+							</div>
+							<header>
+									<h3 class="institution">
+										Colorado Mountain College
+									</h3>
+								<div class="date">
+									<span class="startDate">
+										2007
+									</span>
+									<span class="endDate">
+										- 2009
+									</span>
+								</div>
+							</header>
+							<div class="item">
+									<div class="studyType">
+										Associate&#x27;s degree
+									</div>
+									<div class="area">
+										General Studies
+									</div>
+							</div>
+							<header>
+									<h3 class="institution">
+										Silver Creek Highschool
+									</h3>
+								<div class="date">
+									<span class="startDate">
+										2001
+									</span>
+									<span class="endDate">
+										- 2007
+									</span>
+								</div>
+							</header>
+							<div class="item">
+									<div class="studyType">
+										High School Diploma
+									</div>
+									<div class="area">
+										General Studies
+									</div>
+							</div>
+					</section>
+				</section>
+
+
+
+
+
+				<section class="section">
+					<h2 class='section-title'>Skills</h2>
+					<section id="skills">
+						<div class="item">
+							<div class="name">
+								ASP.NET Core
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Entity Framework
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								AngularJS
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Web Development
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Ruby
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Java
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Mac OS X
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Programming
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								C#
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Microsoft SQL Server
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								jQuery
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								C (Programming Language)
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								JavaScript
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Software Engineering
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Program Development
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Visual Studio
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Parallel Computing
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Red Hat Linux
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Perl
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								SharePoint
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Git
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Python
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Windows
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								ASP.NET MVC
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								C
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Web Services
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								JSON
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Domain Modeling
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Bash
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Mobile Applications
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Computer Security
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Object Oriented Design
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Parallel Programming
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Linux
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								User Experience
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Unix
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Network Security
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Web Applications
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Eclipse
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								ASP.NET
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Entity Framework (EF) Core
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								C++
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Software Development
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Software
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Software Quality Assurance
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Vim
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Representational State Transfer (REST)
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								.NET
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Subversion
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Software Documentation
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<section class="section">
+					<h2 class='section-title'>Languages</h2>
+					<section id="languages">
+						<div class="item">
+							<div class="language">
+								English
+							</div>
+							<div class="fluency">
+								<em>Native Speaker</em>
+							</div>
+						</div>
+					</section>
+				</section>
+
+
+				<section class="section">
+					<h2 class='section-title'>References</h2>
+					<section id="references">
+						<div class="item">
+							<blockquote class="reference">
+								&#8220;&#32;Robert is a highly skilled and motivated programmer. He always stayed on task, and moved forward as fast as he could. He learned very quickly, and always made sure he was doing the job the right way, never just accepting sloppy work.
+
+The biggest thing I took away after working with him is his ability to keep going, keep focused, even while working on a frustrating programming problem. As with most programing, it&#x27;s easy to run into a problem that makes ones head spin with frustration. Robert turned right to Google, books, and colleagues to help figure out the problem quickly. This is a rare trait in programmers.
+
+In short, I am grateful to have worked with Robert. I learned from him. Any prospecting employers would be lucky to have him as an employee.&#32;&#8221;
+							</blockquote>
+							<div class="name">
+								Adam Menges
+							</div>
+						</div>
+					</section>
+				</section>
+		</div>
+	</body>
+
+</html>

@@ -1,7 +1,7 @@
 
 +++ 
-title = "Hugo First Post"
-description = "Helllo"
+title = "Markdown Cheat Sheet"
+description = "This blog is to remain unpublished to be usedd as a markdown cheat sheet."
 draft = false
 type = ["posts","post"]
 tags = [
@@ -20,9 +20,6 @@ series = ["Hugo 101"]
 [ author ]
   name = "10x"
 +++
-
-This blog is to remain unpublished to be usedd as a markdown cheat sheet.
-
 
 Hugo uses the excellent [Go][] [html/template][gohtmltemplate] library for
 its template engine. It is an extremely lightweight engine that provides a very
@@ -53,24 +50,33 @@ functions.
 
 Accessing a predefined variable "foo":
 
+```go
     {{ foo }}
+```
 
 **Parameters are separated using spaces**
 
 Calling the add function with input of 1, 2:
 
+```go
     {{ add 1 2 }}
+```
 
 **Methods and fields are accessed via dot notation**
 
 Accessing the Page Parameter "bar"
 
+```wtml
     {{ .Params.bar }}
+```
 
 **Parentheses can be used to group items together**
 
-    {{ if or (isset .Params "alt") (isset .Params "caption") }} Caption {{ end }}
-
+```go
+    {{ if or (isset .Params "alt") (isset .Params "caption") }} 
+    Caption
+    {{ end }}
+```
 
 ## Variables
 
@@ -81,12 +87,16 @@ page you are rendering. More details are available on the
 
 A variable is accessed by referencing the variable name.
 
+```html
     <title>{{ .Title }}</title>
+```
 
 Variables can also be defined and referenced.
 
+```go
     {{ $address := "123 Main St."}}
     {{ $address }}
+```
 
 
 ## Functions
@@ -101,7 +111,9 @@ functions cannot be added without recompiling hugo.
 
 **Example:**
 
+```go
     {{ add 1 2 }}
+```
 
 ## Includes
 
@@ -112,7 +124,9 @@ the /layout/ directory within Hugo.
 
 **Example:**
 
+```go
     {{ template "chrome/header.html" . }}
+```
 
 
 ## Logic
@@ -127,22 +141,28 @@ range.
 
 **Example 1: Using Context**
 
+```go
     {{ range array }}
         {{ . }}
     {{ end }}
+```
 
 **Example 2: Declaring value variable name**
 
+```go
     {{range $element := array}}
         {{ $element }}
     {{ end }}
+```
 
 **Example 2: Declaring key and value variable name**
 
+```go
     {{range $index, $element := array}}
         {{ $index }}
         {{ $element }}
     {{ end }}
+```
 
 ### Conditionals
 
@@ -158,19 +178,25 @@ Go Templates treat the following values as false:
 
 **Example 1: If**
 
+```go
     {{ if isset .Params "title" }}<h4>{{ index .Params "title" }}</h4>{{ end }}
+```
 
 **Example 2: If -> Else**
 
+```go
     {{ if isset .Params "alt" }}
         {{ index .Params "alt" }}
     {{else}}
         {{ index .Params "caption" }}
     {{ end }}
+```
 
 **Example 3: And & Or**
 
+```go
     {{ if and (or (isset .Params "title") (isset .Params "caption")) (isset .Params "attr")}}
+```
 
 **Example 4: With**
 
@@ -180,15 +206,19 @@ and skips the block if the variable is absent.
 
 The first example above could be simplified as:
 
+```go
     {{ with .Params.title }}<h4>{{ . }}</h4>{{ end }}
+```
 
 **Example 5: If -> Else If**
 
+```go
     {{ if isset .Params "alt" }}
         {{ index .Params "alt" }}
     {{ else if isset .Params "caption" }}
         {{ index .Params "caption" }}
     {{ end }}
+```
 
 ## Pipes
 
@@ -206,32 +236,42 @@ A few simple examples should help convey how to use the pipe.
 
 **Example 1 :**
 
+```go
     {{ if eq 1 1 }} Same {{ end }}
+```
 
 is the same as
 
+```go
     {{ eq 1 1 | if }} Same {{ end }}
+```
 
 It does look odd to place the if at the end, but it does provide a good
 illustration of how to use the pipes.
 
 **Example 2 :**
 
+```go
     {{ index .Params "disqus_url" | html }}
+```
 
 Access the page parameter called "disqus_url" and escape the HTML.
 
 **Example 3 :**
 
+```go
     {{ if or (or (isset .Params "title") (isset .Params "caption")) (isset .Params "attr")}}
     Stuff Here
     {{ end }}
+```
 
 Could be rewritten as
 
+```go
     {{  isset .Params "caption" | or isset .Params "title" | or isset .Params "attr" | if }}
     Stuff Here
     {{ end }}
+```
 
 
 ## Context (aka. the dot)
@@ -246,10 +286,12 @@ instead of depending on the context.
 
 **Example:**
 
+```go
       {{ $title := .Site.Title }}
       {{ range .Params.tags }}
         <li> <a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> - {{ $title }} </li>
       {{ end }}
+```
 
 Notice how once we have entered the loop the value of {{ . }} has changed. We
 have defined a variable outside of the loop so we have access to it from within
@@ -276,7 +318,7 @@ of some pages to turn off the TOC from being displayed.
 
 Here is the example front matter:
 
-```
+```yaml
 ---
 title: "Permalinks"
 date: "2013-11-18"
@@ -290,11 +332,13 @@ notoc: true
 
 Here is the corresponding code inside of the template:
 
+```go
       {{ if not .Params.notoc }}
         <div id="toc" class="well col-md-4 col-sm-6">
         {{ .TableOfContents }}
         </div>
       {{ end }}
+```
 
 
 
@@ -317,7 +361,7 @@ you would declare it to be HTML-safe, so that the HTML entity is not escaped
 again.  This would let you easily update just your top-level config file each
 January 1st, instead of hunting through your templates.
 
-```
+```html
 {{if .Site.Params.CopyrightHTML}}<footer>
 <div class="text-center">{{.Site.Params.CopyrightHTML | safeHtml}}</div>
 </footer>{{end}}
@@ -327,7 +371,7 @@ An alternative way of writing the "if" and then referencing the same value
 is to use "with" instead. With rebinds the context `.` within its scope,
 and skips the block if the variable is absent:
 
-```
+```html
 {{with .Site.Params.TwitterUser}}<span class="twitter">
 <a href="https://twitter.com/{{.}}" rel="author">
 <img src="/images/twitter.png" width="48" height="48" title="Twitter: {{.}}"
@@ -338,7 +382,7 @@ and skips the block if the variable is absent:
 Finally, if you want to pull "magic constants" out of your layouts, you can do
 so, such as in this example:
 
-```
+```html
 <nav class="recent">
   <h1>Recent Posts</h1>
   <ul>{{range first .Site.Params.SidebarRecentLimit .Site.Recent}}
@@ -347,8 +391,5 @@ so, such as in this example:
 </nav>
 ```
 
-
 [go]: https://golang.org/
 [gohtmltemplate]: https://golang.org/pkg/html/template/
-
-

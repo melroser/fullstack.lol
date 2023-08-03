@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Robert Melrose</title>
+    <meta name="description" content="I&#x27;ve been working in software for over a decade mostly web related technologies.
+
+I love to learn. I thrive in working environments where I&#x27;m learning something new or mastering a craft.
+
+Opportunities in the city of Miami (Ideally in Brickell or Downtown) will be given preference. I&#x27;m also open to fully remote positions but would prefer having a hybrid option to come into an office when need arises." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
+    <style>:root {
+  /* Colors */
+  --primaryColor: #212529;
+  --secondaryColor: #95a5a6;
+  --accentColor: #f1c40f;
+  --linkColor: #2ecc71;
+  --mutedColor: #f4f6f6;
+
+  /* Typography */
+  --ratio: 1.25;
+  --scale0: 1rem;
+  --scale1: calc(var(--scale0) * var(--ratio));
+  --scale2: calc(var(--scale1) * var(--ratio));
+  --scale3: calc(var(--scale2) * var(--ratio));
+  --scale4: calc(var(--scale3) * var(--ratio));
+  --scale5: calc(var(--scale4) * var(--ratio));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  color: var(--primaryColor);
+  display: grid;
+  font: 1em/1.5 Lato, sans-serif;
+  gap: 2em;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [main-start side-start]
+    minmax(min-content, 12em)
+    [side-end content-start]
+    minmax(min-content, 36em)
+    [main-end content-end]
+    1fr
+    [full-end];
+  grid-template-rows: auto [content] 0;
+  margin-bottom: 4em;
+}
+
+body::before {
+  content: '';
+  grid-column: full;
+  grid-row: content;
+}
+
+ol,
+ul {
+  padding-left: 1em;
+}
+
+li + li {
+  margin-top: 0.2em;
+}
+
+li::marker {
+  color: var(--mutedColor);
+}
+
+a {
+  color: var(--linkColor);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:focus,
+a:hover {
+  color: var(--accentColor);
+}
+
+h1,
+h2,
+h3,
+h5 {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--scale5);
+}
+
+h2 {
+  color: var(--secondaryColor);
+  font-size: var(--scale4);
+}
+
+h3 {
+  color: var(--accentColor);
+  font-size: var(--scale3);
+  grid-column: side;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: var(--scale2);
+}
+
+h5 {
+  font-size: var(--scale1);
+}
+
+h6 {
+  font-size: var(--scale0);
+}
+
+blockquote {
+  border-left: 0.2em solid var(--mutedColor);
+  padding-left: 1em;
+}
+
+cite {
+  color: var(--secondaryColor);
+  font-style: inherit;
+}
+
+cite::before {
+  content: '— ';
+}
+
+.masthead {
+  background: var(--mutedColor);
+  display: inherit;
+  gap: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
+  padding: 4em 0;
+  row-gap: 0;
+}
+
+.masthead > *,
+section {
+  grid-column: main;
+}
+
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
+}
+
+.stack {
+  display: grid;
+  gap: 1.5em;
+}
+
+.grid-list {
+  display: grid;
+  gap: 1em;
+}
+
+.spaced-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spaced-list:first-child::before {
+  border-bottom: 1px solid var(--mutedColor);
+  content: '';
+  flex-grow: 1;
+  margin: 0 1em;
+  order: 1;
+}
+
+.spaced-list > :nth-child(2) {
+  order: 2;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.tag-list > li {
+  background: var(--mutedColor);
+  margin: 0 0.2em 0.2em 0;
+  padding: 0.2em 0.6em;
+}
+
+@media print, (min-width: 48em) {
+  h3 {
+    text-align: right;
+    margin-bottom: inherit;
+  }
+
+  .masthead > *,
+  section {
+    grid-column: content;
+  }
+
+  section {
+    display: contents;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>
+  </head>
+  <body>
+      <header class="masthead">
+          <h1>Robert Melrose</h1>
+          <h2>Laziness is the Mother of Innovation</h2>
+      </header>
+      <section id="contact">
+        <h3>Contact</h3>
+        <div class="grid-list">
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:themelroser@gmail.com">themelroser@gmail.com</a>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              3037187583
+            </div>
+            <div>
+              <h4>Website</h4>
+              <a href=""></a>
+            </div>
+        </div>
+      </section>
+        <section id="about">
+          <h3>About</h3>
+          <article>
+            <p>I've been working in software for over a decade mostly web related technologies.</p>
+      <p>I love to learn. I thrive in working environments where I'm learning something new or mastering a craft.</p>
+      <p>Opportunities in the city of Miami (Ideally in Brickell or Downtown) will be given preference. I'm also open to fully remote positions but would prefer having a hybrid option to come into an office when need arises.</p>
+          </article>
+        </section>
+        <section id="profiles">
+          <h3>Profiles</h3>
+          <div class="grid-list">
+              <div>
+                  <h4>LinkedIn</h4>
+                    <a href="https://www.linkedin.com/in/themelroser/">themelroser</a>
+              </div>
+          </div>
+        </section>
+
+      <section id="work">
+        <h3>Work</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Accelya Group</h4>
+                  <span>
+                    <time datetime="2015-06-30">Jun 2015</time> –
+                    <time datetime="2022-12-31">Dec 2022</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Engineer II</strong>
+                    <a href="https://www.linkedin.com/company/accelya/">www.linkedin.com/company/accelya</a>
+                </div>
+              </header>
+                <p>I was promoted to the role of Engineer II.</p>
+    <p>I left Accelya Group in December of 2022.</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Accelya Group</h4>
+                  <span>
+                    <time datetime="2020-07-31">Jul 2020</time> –
+                    <time datetime="2022-07-31">Jul 2022</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Engineer</strong>
+                    <a href="https://www.linkedin.com/company/accelya/">www.linkedin.com/company/accelya</a>
+                </div>
+              </header>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Farelogix, an Accelya Group Company</h4>
+                  <span>
+                    <time datetime="2018-12-31">Dec 2018</time> –
+                    <time datetime="2020-07-31">Jul 2020</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software Engineer</strong>
+                    <a href="https://www.linkedin.com/company/farelogix/">www.linkedin.com/company/farelogix</a>
+                </div>
+              </header>
+                <p>I worked on building a small platform of .NET applications. Farelogix was purchased by Accelya Group in the summer of 2020. During this time I was the technical lead of a small platform of applications. I trained 2 interns/junior developers to work with me on maintaining and expanding the capabilities of the platform. I was eventually promoted to Engineer II in Summer of 2022.</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Farelogix, an Accelya Group Company</h4>
+                  <span>
+                    <time datetime="2015-06-30">Jun 2015</time> –
+                    <time datetime="2018-12-31">Dec 2018</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Junior Software Engineer</strong>
+                    <a href="https://www.linkedin.com/company/farelogix/">www.linkedin.com/company/farelogix</a>
+                </div>
+              </header>
+                <p>Started out as a backend C++ developer for my first 2 years.</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Signature Consultants</h4>
+                  <span>
+                    <time datetime="2015-03-31">Mar 2015</time> –
+                    <time datetime="2015-06-30">Jun 2015</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Contract Software Engineer</strong>
+                    <a href="https://www.linkedin.com/company/signature-consultants/">www.linkedin.com/company/signature-consultants</a>
+                </div>
+              </header>
+                <p>Contract to hire via with the company Farelogix.</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Seagate Technology</h4>
+                  <span>
+                    <time datetime="2012-06-30">Jun 2012</time> –
+                    <time datetime="2014-11-30">Nov 2014</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software Engineer</strong>
+                    <a href="https://www.linkedin.com/company/seagate-technology/">www.linkedin.com/company/seagate-technology</a>
+                </div>
+              </header>
+                <p>Software Engineer working for the reliability department. Majority of work was in Python but also used C++, Java and application development in .NET.</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Colorado State University College of Business</h4>
+                  <span>
+                    <time datetime="2011-06-30">Jun 2011</time> –
+                    <time datetime="2012-10-31">Oct 2012</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Web Developer</strong>
+                    <a href="https://www.linkedin.com/school/csu-college-of-business/">www.linkedin.com/school/csu-college-of-business</a>
+                </div>
+              </header>
+                <p>Building and maintaining College of Business Website. My first experience working in .NET. This was SharePoint development. Making these things called Web Parts (I suppose looking back they were something in-between an SPA and an iFrame). You could write a part of a UI like a form for user input and it would use C# logic to do something. Then you could drop this widget wherever you wanted on the site. I did some WCF console applications. It was also my first experience with version control specifically TFS. Eventually I was promoted to Team Lead where I gained a little leadership experience delegating tasks to co-workers.</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Colorado State University College of Business</h4>
+                  <span>
+                    <time datetime="2011-05-31">May 2011</time> –
+                    <time datetime="2012-10-31">Oct 2012</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Web Developer</strong>
+                    <a href="https://www.linkedin.com/school/csu-college-of-business/">www.linkedin.com/school/csu-college-of-business</a>
+                </div>
+              </header>
+                <p>Back-end web development, form development, designing and consuming REST Web Services, SharePoint development, making and deploying web parts that interfaced with a database and created cross-platform mobile web apps using jQuery.</p>
+    <p>Languages used: C#, Asp.Net, java script, jQuery and jQuery mobile.</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>IBM</h4>
+                  <span>
+                    <time datetime="2007-01-31">Jan 2007</time> –
+                    <time datetime="2010-08-31">Aug 2010</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Lead Tape Operator</strong>
+                    <a href="https://www.linkedin.com/company/ibm/">www.linkedin.com/company/ibm</a>
+                </div>
+              </header>
+                <p>Worked for OAO (now Pomeroy) doing near-line storage. began as a tape operator was eventually promoted to lead .</p>
+    <p>Managed a team of about 10 tape operators and performed various other managerial duties.</p>
+            </article>
+        </div>
+      </section>
+      <section id="education">
+        <h3>Education</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Colorado State University</h4>
+                  <span>
+                    <time datetime="2008-12-31">Dec 2008</time> –
+                    <time datetime="2018-12-31">Dec 2018</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Computer Science</strong>
+                </div>
+              </header>
+                <p>Bachelor's degree</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Colorado Mountain College</h4>
+                  <span>
+                    <time datetime="2007-08-31">Aug 2007</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Photography</strong>
+                </div>
+              </header>
+                <p>Associate of Arts - AA</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Colorado Mountain College</h4>
+                  <span>
+                    <time datetime="2007-12-31">Dec 2007</time> –
+                    <time datetime="2009-12-31">Dec 2009</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>General Studies</strong>
+                </div>
+              </header>
+                <p>Associate's degree</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Silver Creek Highschool</h4>
+                  <span>
+                    <time datetime="2001-12-31">Dec 2001</time> –
+                    <time datetime="2007-12-31">Dec 2007</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>General Studies</strong>
+                </div>
+              </header>
+                <p>High School Diploma</p>
+            </article>
+        </div>
+      </section>
+      <section id="certificates">
+        <h3>Certificates</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>IT Security Careers and Certifications: First Steps</h4>
+                </div>
+                <div class="spaced-list">
+                    <span>
+                      Issued by <strong>LinkedIn</strong>
+                    </span>
+                    <a href="http://www.linkedin.com/learning/it-security-careers-and-certifications-first-steps">www.linkedin.com/learning/it-security-careers-and-certifications-first-steps</a>
+                </div>
+              </header>
+            </article>
+        </div>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-list">
+            <div>
+                <h4>ASP.NET Core</h4>
+            </div>
+            <div>
+                <h4>Entity Framework</h4>
+            </div>
+            <div>
+                <h4>AngularJS</h4>
+            </div>
+            <div>
+                <h4>Web Development</h4>
+            </div>
+            <div>
+                <h4>Ruby</h4>
+            </div>
+            <div>
+                <h4>Java</h4>
+            </div>
+            <div>
+                <h4>Mac OS X</h4>
+            </div>
+            <div>
+                <h4>Programming</h4>
+            </div>
+            <div>
+                <h4>C#</h4>
+            </div>
+            <div>
+                <h4>Microsoft SQL Server</h4>
+            </div>
+            <div>
+                <h4>jQuery</h4>
+            </div>
+            <div>
+                <h4>C (Programming Language)</h4>
+            </div>
+            <div>
+                <h4>JavaScript</h4>
+            </div>
+            <div>
+                <h4>Software Engineering</h4>
+            </div>
+            <div>
+                <h4>Program Development</h4>
+            </div>
+            <div>
+                <h4>Visual Studio</h4>
+            </div>
+            <div>
+                <h4>Parallel Computing</h4>
+            </div>
+            <div>
+                <h4>Red Hat Linux</h4>
+            </div>
+            <div>
+                <h4>Perl</h4>
+            </div>
+            <div>
+                <h4>SharePoint</h4>
+            </div>
+            <div>
+                <h4>Git</h4>
+            </div>
+            <div>
+                <h4>Python</h4>
+            </div>
+            <div>
+                <h4>Windows</h4>
+            </div>
+            <div>
+                <h4>ASP.NET MVC</h4>
+            </div>
+            <div>
+                <h4>C</h4>
+            </div>
+            <div>
+                <h4>Web Services</h4>
+            </div>
+            <div>
+                <h4>JSON</h4>
+            </div>
+            <div>
+                <h4>Domain Modeling</h4>
+            </div>
+            <div>
+                <h4>Bash</h4>
+            </div>
+            <div>
+                <h4>Mobile Applications</h4>
+            </div>
+            <div>
+                <h4>Computer Security</h4>
+            </div>
+            <div>
+                <h4>Object Oriented Design</h4>
+            </div>
+            <div>
+                <h4>Parallel Programming</h4>
+            </div>
+            <div>
+                <h4>Linux</h4>
+            </div>
+            <div>
+                <h4>User Experience</h4>
+            </div>
+            <div>
+                <h4>Unix</h4>
+            </div>
+            <div>
+                <h4>Network Security</h4>
+            </div>
+            <div>
+                <h4>Web Applications</h4>
+            </div>
+            <div>
+                <h4>Eclipse</h4>
+            </div>
+            <div>
+                <h4>ASP.NET</h4>
+            </div>
+            <div>
+                <h4>Entity Framework (EF) Core</h4>
+            </div>
+            <div>
+                <h4>C++</h4>
+            </div>
+            <div>
+                <h4>Software Development</h4>
+            </div>
+            <div>
+                <h4>Software</h4>
+            </div>
+            <div>
+                <h4>Software Quality Assurance</h4>
+            </div>
+            <div>
+                <h4>Vim</h4>
+            </div>
+            <div>
+                <h4>Representational State Transfer (REST)</h4>
+            </div>
+            <div>
+                <h4>.NET</h4>
+            </div>
+            <div>
+                <h4>Subversion</h4>
+            </div>
+            <div>
+                <h4>Software Documentation</h4>
+            </div>
+        </div>
+      </section>
+      <section id="languages">
+        <h3>Languages</h3>
+        <div class="grid-list">
+            <div>
+                <h4>English</h4>
+              Native Speaker
+            </div>
+        </div>
+      </section>
+      <section id="references">
+        <h3>References</h3>
+        <div class="stack">
+              <blockquote>
+                <p>Robert is a highly skilled and motivated programmer. He always stayed on task, and moved forward as fast as he could. He learned very quickly, and always made sure he was doing the job the right way, never just accepting sloppy work.</p>
+    <p>The biggest thing I took away after working with him is his ability to keep going, keep focused, even while working on a frustrating programming problem. As with most programing, it's easy to run into a problem that makes ones head spin with frustration. Robert turned right to Google, books, and colleagues to help figure out the problem quickly. This is a rare trait in programmers.</p>
+    <p>In short, I am grateful to have worked with Robert. I learned from him. Any prospecting employers would be lucky to have him as an employee.</p>
+                  <p>
+                    <cite>Adam Menges</cite>
+                  </p>
+              </blockquote>
+        </div>
+      </section>
+  </body>
+</html>

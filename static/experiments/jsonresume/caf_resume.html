@@ -1,0 +1,797 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	<title>Robert Melrose</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<style>
+		/* Utils */
+/*----- Colors -----*/
+/*----- Fonts -----*/
+/*----- Dimensions and sizes -----*/
+/* Base */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background: #f8f8f8;
+  margin: 50px 0 100px;
+  letter-spacing: .3px;
+  color: #39424B; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  margin: 0; }
+
+h1 {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 1px; }
+
+h2 {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: .5px; }
+
+h3 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: .4px; }
+  h3.bold {
+    font-weight: 700; }
+
+h4 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 12px; }
+  h4.bold {
+    font-weight: 700; }
+
+h5 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 11px; }
+  h5.italic {
+    font-style: italic; }
+
+h6 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px; }
+
+a {
+  color: inherit;
+  text-decoration: inherit; }
+  a:hover {
+    color: #2895F1; }
+  a .fa-external-link {
+    font-size: 10px;
+    vertical-align: text-top; }
+
+p,
+li {
+  font-size: 11px; }
+
+blockquote {
+  font-size: 11px;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 10px 25px; }
+
+em {
+  color: #999; }
+
+ul {
+  margin: 10px 0 0;
+  -webkit-padding-start: 25px; }
+  ul li {
+    padding-left: 10px; }
+  ul.minimal {
+    list-style: none;
+    padding: 0; }
+    ul.minimal li {
+      margin-bottom: 3px;
+      padding-left: 0; }
+  ul.two-column {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 28px;
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 28px;
+         column-gap: 28px; }
+    ul.two-column li {
+      padding-left: 0; }
+
+@page {
+  size: A4; }
+
+.container {
+  padding-top: 20px; }
+
+.keyline {
+  width: 45px;
+  margin: 8px 0 10px;
+  border-top: 1px solid #56817A; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.profile-pic {
+  margin-top: -5px;
+  margin-right: 18px; }
+  .profile-pic img {
+    height: 52px;
+    width: 52px;
+    border-radius: 50%;
+    border: 2px solid #56817A; }
+
+.summary {
+  margin: 5px 0 5px; }
+
+/* Layouts */
+.page {
+  background: white;
+  width: 612px;
+  min-height: 792px;
+  display: block;
+  margin: 0 auto;
+  border-top: 10px solid #56817A;
+  padding: 36px 22px 30px 34px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
+  .page:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.left-column {
+  float: left;
+  width: 160px;
+  margin-right: 20px;
+  word-wrap: break-word; }
+
+.right-column {
+  width: auto;
+  overflow: hidden; }
+
+.item {
+  margin-bottom: 15px; }
+  .item:last-child {
+    margin-bottom: 0; }
+
+@media print {
+  body {
+    margin: 0; }
+  .page {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 36px 0 30px;
+    box-shadow: none; }
+    .page .resume-header,
+    .page .resume-content {
+      padding: 0 22px 0 34px; }
+  .container {
+    page-break-inside: avoid; }
+  .work-container .item {
+    page-break-inside: avoid; }
+  .fa-external-link {
+    display: none; } }
+
+/* Components */
+.info-tag-container {
+  margin-bottom: 5px; }
+  .info-tag-container .fa {
+    font-size: 14px;
+    width: 12px;
+    margin-right: 5px;
+    text-align: center;
+    vertical-align: middle; }
+    .info-tag-container .fa.fa-map-marker {
+      font-size: 16px; }
+    .info-tag-container .fa.fa-mobile {
+      font-size: 18px; }
+    .info-tag-container .fa.fa-envelope-o {
+      font-size: 12px; }
+    .info-tag-container .fa.fa-desktop {
+      font-size: 11px; }
+    .info-tag-container .fa.fa-external-link {
+      width: auto;
+      font-size: inherit;
+      vertical-align: text-top; }
+  .info-tag-container .info-text {
+    font-size: 9px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 139px; }
+
+.references-container .fa {
+  font-size: 14px; }
+
+	</style>
+	</head>
+	<body>
+		<main id="resume" class="page">
+			<header class="resume-header clearfix">
+			    <div class="profile-header pull-left">
+			        <h1>Robert Melrose</h1>
+			        <h2>Laziness is the Mother of Innovation</h2>
+			    </div>
+			    <div class="profile-pic pull-right">
+			        <img src="" alt="profile-pic">
+			    </div>
+			</header>
+			<div class="resume-content">
+				<aside class="left-column">
+					<div class="container about-container">
+					    <div class="title">
+					        <h3>About</h3>
+					        <div class="keyline"></div>
+					    </div>
+					        <div class="info-tag-container">
+					            <i class="fa fa-map-marker"></i>
+					        
+					                <h6 class="info-text">145 SW 13th Street Unit 248
+					        Miami FL 33130</h6>
+					        </div>
+					        <div class="info-tag-container">
+					            <i class="fa fa-envelope-o"></i>
+					        
+					                <h6 class="info-text">themelroser@gmail.com</h6>
+					        </div>
+					        <div class="info-tag-container">
+					            <i class="fa fa-mobile"></i>
+					        
+					                <h6 class="info-text">3037187583</h6>
+					        </div>
+					
+					                        <div class="info-tag-container">
+					                            <i class="fa fa-linkedin-square"></i>
+					                        
+					                                <h6 class="info-text">
+					                                    <a href="https://www.linkedin.com/in/themelroser/" target="_blank">
+					                                        in/themelroser <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                    </a>
+					                                </h6>
+					                        </div></section>
+					    <div class="skills-container">
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>ASP.NET Core</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Entity Framework</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>AngularJS</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Web Development</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Ruby</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Java</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Mac OS X</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Programming</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>C#</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Microsoft SQL Server</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>jQuery</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>C (Programming Language)</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>JavaScript</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Software Engineering</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Program Development</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Visual Studio</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Parallel Computing</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Red Hat Linux</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Perl</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>SharePoint</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Git</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Python</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Windows</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>ASP.NET MVC</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>C</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Web Services</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>JSON</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Domain Modeling</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Bash</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Mobile Applications</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Computer Security</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Object Oriented Design</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Parallel Programming</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Linux</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>User Experience</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Unix</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Network Security</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Web Applications</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Eclipse</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>ASP.NET</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Entity Framework (EF) Core</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>C++</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Software Development</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Software</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Software Quality Assurance</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Vim</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Representational State Transfer (REST)</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>.NET</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Subversion</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Software Documentation</h3>
+					                        <div class="keyline"></div>
+					                    </div>            </section>
+					    </div>
+					    <div class="container languages-container">
+					        <div class="title">
+					            <h3>Languages</h3>
+					            <div class="keyline"></div>
+					        </div>
+					        <ul class="minimal">
+					                <li>
+					                    <h6>English <em>(Native Speaker)</em></h6>
+					                </li>
+					        </ul>
+					    </div>
+				</aside>
+				<div class="right-column">
+					        <div class="container summary-container">
+					            <div class="title">
+					                <h3>Summary</h3>
+					                <div class="keyline"></div>
+					            </div>            <p class="summary">
+					                I&#x27;ve been working in software for over a decade mostly web related technologies.
+					
+					I love to learn. I thrive in working environments where I&#x27;m learning something new or mastering a craft.
+					
+					Opportunities in the city of Miami (Ideally in Brickell or Downtown) will be given preference. I&#x27;m also open to fully remote positions but would prefer having a hybrid option to come into an office when need arises.
+					            </p>
+					        </div>
+					<div class="container work-container">
+					    <div class="title">
+					        <h3>Experience</h3>
+					        <div class="keyline"></div>
+					    </div>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">06/2015</span>
+					                        <span class="endDate"> - 12/2022</span>
+					                </h5>
+					            </div>
+					            <h4>Engineer II</h4>
+					
+					            <p class="summary">I was promoted to the role of Engineer II.
+					
+					I left Accelya Group in December of 2022.</p>
+					
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">07/2020</span>
+					                        <span class="endDate"> - 07/2022</span>
+					                </h5>
+					            </div>
+					            <h4>Engineer</h4>
+					
+					
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">12/2018</span>
+					                        <span class="endDate"> - 07/2020</span>
+					                </h5>
+					            </div>
+					            <h4>Software Engineer</h4>
+					
+					            <p class="summary">I worked on building a small platform of .NET applications. Farelogix was purchased by Accelya Group in the summer of 2020. During this time I was the technical lead of a small platform of applications. I trained 2 interns/junior developers to work with me on maintaining and expanding the capabilities of the platform. I was eventually promoted to Engineer II in Summer of 2022.</p>
+					
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">06/2015</span>
+					                        <span class="endDate"> - 12/2018</span>
+					                </h5>
+					            </div>
+					            <h4>Junior Software Engineer</h4>
+					
+					            <p class="summary">Started out as a backend C++ developer for my first 2 years.</p>
+					
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">03/2015</span>
+					                        <span class="endDate"> - 06/2015</span>
+					                </h5>
+					            </div>
+					            <h4>Contract Software Engineer</h4>
+					
+					            <p class="summary">Contract to hire via with the company Farelogix.</p>
+					
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">06/2012</span>
+					                        <span class="endDate"> - 11/2014</span>
+					                </h5>
+					            </div>
+					            <h4>Software Engineer</h4>
+					
+					            <p class="summary">Software Engineer working for the reliability department. Majority of work was in Python but also used C++, Java and application development in .NET.</p>
+					
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">06/2011</span>
+					                        <span class="endDate"> - 10/2012</span>
+					                </h5>
+					            </div>
+					            <h4>Web Developer</h4>
+					
+					            <p class="summary">Building and maintaining College of Business Website. My first experience working in .NET. This was SharePoint development. Making these things called Web Parts (I suppose looking back they were something in-between an SPA and an iFrame). You could write a part of a UI like a form for user input and it would use C# logic to do something. Then you could drop this widget wherever you wanted on the site. I did some WCF console applications. It was also my first experience with version control specifically TFS. Eventually I was promoted to Team Lead where I gained a little leadership experience delegating tasks to co-workers.</p>
+					
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">05/2011</span>
+					                        <span class="endDate"> - 10/2012</span>
+					                </h5>
+					            </div>
+					            <h4>Web Developer</h4>
+					
+					            <p class="summary">Back-end web development, form development, designing and consuming REST Web Services, SharePoint development, making and deploying web parts that interfaced with a database and created cross-platform mobile web apps using jQuery.
+					
+					Languages used: C#, Asp.Net, java script, jQuery and jQuery mobile.</p>
+					
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">01/2007</span>
+					                        <span class="endDate"> - 08/2010</span>
+					                </h5>
+					            </div>
+					            <h4>Lead Tape Operator</h4>
+					
+					            <p class="summary">Worked for OAO (now Pomeroy) doing near-line storage. began as a tape operator was eventually promoted to lead .
+					
+					Managed a team of about 10 tape operators and performed various other managerial duties.</p>
+					
+					        </section>
+					</div>
+					<div class="container education-container">
+					    <div class="title">
+					        <h3>Education</h3>
+					        <div class="keyline"></div>
+					    </div>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Colorado State University
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">12/2008</span>
+					                        <span class="endDate"> - 12/2018</span>
+					                </h5>
+					            </div>
+					            <h4>Bachelor&#x27;s degree Computer Science</h4>
+					
+					
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Colorado Mountain College
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">08/2007</span>
+					                        <span class="endDate"> - Present</span>
+					                </h5>
+					            </div>
+					            <h4>Associate of Arts - AA Photography</h4>
+					
+					
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Colorado Mountain College
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">12/2007</span>
+					                        <span class="endDate"> - 12/2009</span>
+					                </h5>
+					            </div>
+					            <h4>Associate&#x27;s degree General Studies</h4>
+					
+					
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Silver Creek Highschool
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">12/2001</span>
+					                        <span class="endDate"> - 12/2007</span>
+					                </h5>
+					            </div>
+					            <h4>High School Diploma General Studies</h4>
+					
+					
+					        </section>
+					</div>
+					<div class="container references-container">
+					    <div class="title">
+					        <h3>References</h3>
+					        <div class="keyline"></div>
+					    </div>
+					        <section class="item clearfix">
+					            <i class="fa fa-quote-left pull-left" aria-hidden="true"></i>
+					            <blockquote>
+					                Robert is a highly skilled and motivated programmer. He always stayed on task, and moved forward as fast as he could. He learned very quickly, and always made sure he was doing the job the right way, never just accepting sloppy work.
+					
+					The biggest thing I took away after working with him is his ability to keep going, keep focused, even while working on a frustrating programming problem. As with most programing, it&#x27;s easy to run into a problem that makes ones head spin with frustration. Robert turned right to Google, books, and colleagues to help figure out the problem quickly. This is a rare trait in programmers.
+					
+					In short, I am grateful to have worked with Robert. I learned from him. Any prospecting employers would be lucky to have him as an employee.
+					            </blockquote>
+					
+					            <h5 class="pull-right"> — Adam Menges</h5>
+					        </section>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

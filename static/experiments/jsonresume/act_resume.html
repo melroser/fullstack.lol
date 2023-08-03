@@ -1,0 +1,379 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><style>@charset "UTF-8";
+/* Workaround for 'break-before:avoid' */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+span, q {
+  display: block;
+}
+
+p {
+  margin: 0;
+}
+
+@page {
+  size: A4;
+  margin: 15mm 0 20mm 0;
+}
+@page :first {
+  margin-top: 10mm;
+}
+a {
+  color: #222222;
+  font-weight: inherit;
+  text-decoration: none;
+}
+a[href] {
+  text-decoration: underline;
+  text-decoration-color: #888888;
+}
+
+p, q {
+  line-height: 1.25em;
+}
+
+li {
+  line-height: 1.35em;
+}
+li:first-child {
+  margin-top: 0;
+}
+
+.content {
+  width: 1000px;
+  height: auto;
+  padding: 0 50px;
+  margin: 0 auto;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #222222;
+}
+
+.table {
+  width: 100%;
+  display: table;
+}
+.table .main {
+  display: table-cell;
+  width: 70%;
+  padding-right: 50px;
+}
+.table .side {
+  display: table-cell;
+  width: 30%;
+  padding-left: 50px;
+  text-align: right;
+}
+
+.summary {
+  font-size: 15px;
+}
+.summary:empty {
+  display: none;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: normal;
+  margin: 0 0 20px 0;
+}
+
+.margin-container-2:not(:first-child) {
+  margin-top: 20px;
+}
+
+.margin-container-3:not(:first-child) {
+  margin-top: 30px;
+}
+
+.margin-container-4:not(:first-child) {
+  margin-top: 50px;
+}
+
+.padding-container-2 {
+  padding: 20px 0;
+}
+
+.margin-text-1 {
+  margin-top: 2px;
+}
+.margin-text-1:empty {
+  display: none;
+}
+
+.margin-text-2 {
+  margin-top: 4px;
+}
+.margin-text-2:empty {
+  display: none;
+}
+
+.margin-text-3 {
+  margin-top: 6px;
+}
+.margin-text-3:empty {
+  display: none;
+}
+
+.margin-text-4 {
+  margin-top: 8px;
+}
+.margin-text-4:empty {
+  display: none;
+}
+
+.margin-text-5 {
+  margin-top: 14px;
+}
+.margin-text-5:empty {
+  display: none;
+}
+
+.no-break {
+  break-inside: avoid;
+}
+
+.no-alone-1 {
+  break-inside: avoid;
+}
+.no-alone-1::after {
+  content: "";
+  display: block;
+  height: 75px;
+  margin-bottom: -75px;
+}
+
+.no-alone-2 {
+  break-inside: avoid;
+}
+.no-alone-2::after {
+  content: "";
+  display: block;
+  height: 150px;
+  margin-bottom: -150px;
+}
+
+.markdown h1 {
+  font-size: 160%;
+  font-weight: bolder;
+}
+.markdown h2 {
+  font-size: 150%;
+  font-weight: bolder;
+}
+.markdown h3 {
+  font-size: 140%;
+  font-weight: bolder;
+}
+.markdown h4 {
+  font-size: 130%;
+  font-weight: bold;
+}
+.markdown h5 {
+  font-size: 120%;
+  font-weight: bold;
+}
+.markdown h6 {
+  font-size: 110%;
+  font-weight: bold;
+}
+.markdown ul, .markdown ol {
+  margin-left: 20px;
+}
+.markdown img {
+  display: block;
+  margin: 20px auto;
+  max-width: 1000px;
+  text-align: center;
+}
+.markdown blockquote {
+  margin: 20px 0;
+  padding: 15px 20px;
+}
+.markdown blockquote p {
+  display: inline;
+}
+.markdown code {
+  font-family: monospace;
+}
+
+.main .highlights {
+  width: auto;
+  display: block;
+  padding: 0 10px;
+  margin-bottom: 0;
+  columns: 2;
+  column-width: 310px;
+  column-gap: 10px;
+}
+.main .highlights li {
+  font-size: 14px;
+  list-style: none;
+}
+.main .highlights li:before {
+  content: "· ";
+  vertical-align: middle;
+}
+.main .left {
+  display: table-cell;
+}
+.main .left .title {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+}
+.main .left .subtitle {
+  font-size: 16px;
+  font-weight: lighter;
+  display: block;
+}
+.main .right {
+  text-align: right;
+  display: table-cell;
+}
+.main .right .date {
+  font-size: 15px;
+  font-weight: lighter;
+  white-space: nowrap;
+}
+
+.basics .main {
+  vertical-align: middle;
+}
+.basics .main .name {
+  font-size: 80px;
+  line-height: 1em;
+  font-weight: bold;
+  display: block;
+  margin-left: -5.6px;
+}
+.basics .main .label {
+  font-size: 40px;
+  line-height: 1em;
+  font-weight: lighter;
+  display: block;
+  margin-left: -1.6px;
+}
+.basics .side {
+  vertical-align: middle;
+  padding-left: 0;
+  padding-top: 15px;
+}
+.basics .side .contact {
+  list-style-type: none;
+}
+.basics .side .contact li {
+  font-size: 18px;
+  line-height: 1.6em;
+}
+
+.links ul {
+  list-style: none;
+}
+.links ul li {
+  font-size: 14px;
+}
+
+.education .title {
+  font-size: 15px;
+}
+.education .institution {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.awards .header .title {
+  font-size: 15px;
+}
+.awards .header .awarder {
+  font-size: 15px;
+  font-weight: lighter;
+}
+.awards .summary {
+  font-size: 14px;
+}
+
+.certificates .name {
+  font-size: 15px;
+}
+.certificates .issuer {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.skills .section-title {
+  margin: 0;
+}
+.skills .container {
+  display: block;
+  columns: 2;
+  column-gap: 10px;
+}
+.skills .container .article {
+  break-inside: avoid-column;
+  min-width: 120px;
+  padding-top: 20px;
+}
+.skills .container .article span {
+  display: block;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.skills .container .article li {
+  font-size: 14px;
+  list-style: none;
+}
+
+.languages ul {
+  list-style: none;
+}
+.languages ul li {
+  font-size: 14px;
+}
+
+.interests ul {
+  list-style: none;
+}
+.interests ul li {
+  font-size: 14px;
+}
+
+.references .name {
+  font-size: 15px;
+}
+.references q {
+  font-size: 14.5px;
+  font-weight: lighter;
+  font-style: italic;
+}</style><title>Resume Robert Melrose – Laziness is the Mother of Innovation</title></head><body><div class="content"><div class="basics"><div class="table padding-container-2"><div class="main"><span class="name">Robert Melrose</span><span class="label">Laziness is the Mother of Innovation</span></div><div class="side"><ul class="contact"><li>3037187583</li><li>themelroser@gmail.com</li><li class="margin-text-5">United States of America</li></ul></div></div><div class="summary markdown padding-container-2"><p>I've been working in software for over a decade mostly web related technologies.</p>
+<p>I love to learn. I thrive in working environments where I'm learning something new or mastering a craft.</p>
+<p>Opportunities in the city of Miami (Ideally in Brickell or Downtown) will be given preference. I'm also open to fully remote positions but would prefer having a hybrid option to come into an office when need arises.</p>
+</div></div><div class="table padding-container-2"><div class="main"><div class="work margin-container-4"><p class="section-title no-alone-2">Experience</p><div class="container"><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Engineer II</span><span class="subtitle margin-text-1"><a href="https://www.linkedin.com/company/accelya/">Accelya Group</a> · Miami, Florida, United States</span></div><div class="right"><span class="date">Jun 2015 - Dec 2022</span></div></div></div><div class="summary markdown margin-text-4"><p>I was promoted to the role of Engineer II.</p>
+<p>I left Accelya Group in December of 2022.</p>
+</div></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Engineer</span><span class="subtitle margin-text-1"><a href="https://www.linkedin.com/company/accelya/">Accelya Group</a> · Miami, Florida, United States</span></div><div class="right"><span class="date">Jul 2020 - Jul 2022</span></div></div></div><div class="summary markdown margin-text-4"></div></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Software Engineer</span><span class="subtitle margin-text-1"><a href="https://www.linkedin.com/company/farelogix/">Farelogix, an Accelya Group Company</a> · Miami, Florida, United States</span></div><div class="right"><span class="date">Dec 2018 - Jul 2020</span></div></div></div><div class="summary markdown margin-text-4"><p>I worked on building a small platform of .NET applications. Farelogix was purchased by Accelya Group in the summer of 2020. During this time I was the technical lead of a small platform of applications. I trained 2 interns/junior developers to work with me on maintaining and expanding the capabilities of the platform. I was eventually promoted to Engineer II in Summer of 2022.</p>
+</div></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Junior Software Engineer</span><span class="subtitle margin-text-1"><a href="https://www.linkedin.com/company/farelogix/">Farelogix, an Accelya Group Company</a> · Miami, Florida, United States</span></div><div class="right"><span class="date">Jun 2015 - Dec 2018</span></div></div></div><div class="summary markdown margin-text-4"><p>Started out as a backend C++ developer for my first 2 years.</p>
+</div></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Contract Software Engineer</span><span class="subtitle margin-text-1"><a href="https://www.linkedin.com/company/signature-consultants/">Signature Consultants</a> · Miami, Florida, United States</span></div><div class="right"><span class="date">Mar 2015 - Jun 2015</span></div></div></div><div class="summary markdown margin-text-4"><p>Contract to hire via with the company Farelogix.</p>
+</div></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Software Engineer</span><span class="subtitle margin-text-1"><a href="https://www.linkedin.com/company/seagate-technology/">Seagate Technology</a> · Longmont, Colorado</span></div><div class="right"><span class="date">Jun 2012 - Nov 2014</span></div></div></div><div class="summary markdown margin-text-4"><p>Software Engineer working for the reliability department. Majority of work was in Python but also used C++, Java and application development in .NET.</p>
+</div></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Web Developer</span><span class="subtitle margin-text-1"><a href="https://www.linkedin.com/school/csu-college-of-business/">Colorado State University College of Business</a> · Fort Collins, Colorado, United States</span></div><div class="right"><span class="date">Jun 2011 - Oct 2012</span></div></div></div><div class="summary markdown margin-text-4"><p>Building and maintaining College of Business Website. My first experience working in .NET. This was SharePoint development. Making these things called Web Parts (I suppose looking back they were something in-between an SPA and an iFrame). You could write a part of a UI like a form for user input and it would use C# logic to do something. Then you could drop this widget wherever you wanted on the site. I did some WCF console applications. It was also my first experience with version control specifically TFS. Eventually I was promoted to Team Lead where I gained a little leadership experience delegating tasks to co-workers.</p>
+</div></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Web Developer</span><span class="subtitle margin-text-1"><a href="https://www.linkedin.com/school/csu-college-of-business/">Colorado State University College of Business</a> · Fort Collins, Colorado, United States</span></div><div class="right"><span class="date">May 2011 - Oct 2012</span></div></div></div><div class="summary markdown margin-text-4"><p>Back-end web development, form development, designing and consuming REST Web Services, SharePoint development, making and deploying web parts that interfaced with a database and created cross-platform mobile web apps using jQuery.</p>
+<p>Languages used: C#, Asp.Net, java script, jQuery and jQuery mobile.</p>
+</div></div><div class="article margin-container-3"><div class="header no-alone-1"><div class="table"><div class="left"><span class="title">Lead Tape Operator</span><span class="subtitle margin-text-1"><a href="https://www.linkedin.com/company/ibm/">IBM</a> · Longmont, Colorado</span></div><div class="right"><span class="date">Jan 2007 - Aug 2010</span></div></div></div><div class="summary markdown margin-text-4"><p>Worked for OAO (now Pomeroy) doing near-line storage. began as a tape operator was eventually promoted to lead .</p>
+<p>Managed a team of about 10 tape operators and performed various other managerial duties.</p>
+</div></div></div></div></div><div class="side"><div class="skills margin-container-4"><p class="section-title no-alone-1">Skills</p><div class="container"><div class="article no-break"><span>ASP.NET Core</span></div><div class="article no-break"><span>Entity Framework</span></div><div class="article no-break"><span>AngularJS</span></div><div class="article no-break"><span>Web Development</span></div><div class="article no-break"><span>Ruby</span></div><div class="article no-break"><span>Java</span></div><div class="article no-break"><span>Mac OS X</span></div><div class="article no-break"><span>Programming</span></div><div class="article no-break"><span>C#</span></div><div class="article no-break"><span>Microsoft SQL Server</span></div><div class="article no-break"><span>jQuery</span></div><div class="article no-break"><span>C (Programming Language)</span></div><div class="article no-break"><span>JavaScript</span></div><div class="article no-break"><span>Software Engineering</span></div><div class="article no-break"><span>Program Development</span></div><div class="article no-break"><span>Visual Studio</span></div><div class="article no-break"><span>Parallel Computing</span></div><div class="article no-break"><span>Red Hat Linux</span></div><div class="article no-break"><span>Perl</span></div><div class="article no-break"><span>SharePoint</span></div><div class="article no-break"><span>Git</span></div><div class="article no-break"><span>Python</span></div><div class="article no-break"><span>Windows</span></div><div class="article no-break"><span>ASP.NET MVC</span></div><div class="article no-break"><span>C</span></div><div class="article no-break"><span>Web Services</span></div><div class="article no-break"><span>JSON</span></div><div class="article no-break"><span>Domain Modeling</span></div><div class="article no-break"><span>Bash</span></div><div class="article no-break"><span>Mobile Applications</span></div><div class="article no-break"><span>Computer Security</span></div><div class="article no-break"><span>Object Oriented Design</span></div><div class="article no-break"><span>Parallel Programming</span></div><div class="article no-break"><span>Linux</span></div><div class="article no-break"><span>User Experience</span></div><div class="article no-break"><span>Unix</span></div><div class="article no-break"><span>Network Security</span></div><div class="article no-break"><span>Web Applications</span></div><div class="article no-break"><span>Eclipse</span></div><div class="article no-break"><span>ASP.NET</span></div><div class="article no-break"><span>Entity Framework (EF) Core</span></div><div class="article no-break"><span>C++</span></div><div class="article no-break"><span>Software Development</span></div><div class="article no-break"><span>Software</span></div><div class="article no-break"><span>Software Quality Assurance</span></div><div class="article no-break"><span>Vim</span></div><div class="article no-break"><span>Representational State Transfer (REST)</span></div><div class="article no-break"><span>.NET</span></div><div class="article no-break"><span>Subversion</span></div><div class="article no-break"><span>Software Documentation</span></div></div></div><div class="education margin-container-4"><p class="section-title no-alone-1">Education</p><div class="container"><div class="article margin-container-2 no-break"><div class="title markdown"><p>Bachelor's degree, Computer Science</p>
+</div><span class="institution margin-text-2"><a>Colorado State University</a></span></div><div class="article margin-container-2 no-break"><div class="title markdown"><p>Associate of Arts - AA, Photography</p>
+</div><span class="institution margin-text-2"><a>Colorado Mountain College</a></span></div><div class="article margin-container-2 no-break"><div class="title markdown"><p>Associate's degree, General Studies</p>
+</div><span class="institution margin-text-2"><a>Colorado Mountain College</a></span></div><div class="article margin-container-2 no-break"><div class="title markdown"><p>High School Diploma, General Studies</p>
+</div><span class="institution margin-text-2"><a>Silver Creek Highschool</a></span></div></div></div><div class="certificates margin-container-4"><p class="section-title no-alone-1">Certificates</p><div class="container"><div class="article margin-container-2 no-break"><div class="name markdown"><a href="http://www.linkedin.com/learning/it-security-careers-and-certifications-first-steps"><p>IT Security Careers and Certifications: First Steps</p>
+</a></div><span class="issuer margin-text-2">LinkedIn</span></div></div></div><div class="references margin-container-4"><p class="section-title no-alone-2">References</p><div class="container"><div class="article margin-container-2 no-break"><span class="name">Adam Menges</span><q class="margin-text-2">Robert is a highly skilled and motivated programmer. He always stayed on task, and moved forward as fast as he could. He learned very quickly, and always made sure he was doing the job the right way, never just accepting sloppy work.
+
+The biggest thing I took away after working with him is his ability to keep going, keep focused, even while working on a frustrating programming problem. As with most programing, it's easy to run into a problem that makes ones head spin with frustration. Robert turned right to Google, books, and colleagues to help figure out the problem quickly. This is a rare trait in programmers.
+
+In short, I am grateful to have worked with Robert. I learned from him. Any prospecting employers would be lucky to have him as an employee.</q></div></div></div><div class="languages margin-container-4 no-break"><p class="section-title no-alone-1">Languages</p><div class="container"><ul><li class="article margin-text-2">English · Native Speaker</li></ul></div></div><div class="links margin-container-4 no-break"><p class="section-title no-alone-1">Links</p><div class="container"><ul><li class="article margin-text-4"><a href="https://www.linkedin.com/in/themelroser/"><strong>linkedin.com</strong>/in/themelroser</a></li></ul></div></div></div></div></div></body></html>

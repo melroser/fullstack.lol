@@ -9,7 +9,7 @@ disqusShortname = "fullstack-lol"
 
 paginate     = 10
 rssLimit  = 99  # Maximum number of items in the RSS feed.
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+copyright = "🄯 It's free realestate"
 
 [params]
   dateform        = "Jan 2, 2006"
@@ -22,7 +22,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 
 
   # Subtitle for home
-  homeSubtitle = "If this blog is actively being maintained things are not going well for its owner..."
+  homeSubtitle = "If this blog is actively being maintained things are not going well for it's author..."
 
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts = false
@@ -31,11 +31,9 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   enableSharingButtons = true
 
   # Metadata mostly used in document's head
-  description = "I heard on youtube you need a blog to be successfull. Not looking great so far."
+  description = "A silly place for silly software"
   keywords = "homepage, blog, developer, fullstack"
   images = [""]
-
-
 
   # Integrate Javascript files or stylesheets by adding the url to the external assets or by
   # linking local files with their path relative to the static folder, e.g. "css/styles.css"
@@ -45,27 +43,25 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo
   #
-  justifyContent = false  # Set "text-align: justify" to .post-content.
+  justifyContent = true  # Set "text-align: justify" to .post-content.
 
-  # Custom footer 
-  # If you want, you can easily override the default footer with your own content. 
+  # Custom footer
+  # If you want, you can easily override the default footer with your own content.
   #
   [params.fontAwesome]
     KitURL = "all.js"
 
   [params.footer]
-    trademark = true
+    trademark = false
     rss = true
     copyright = true
     author = true
 
     # Shows social icons on footer instead of main page
-    socialIcons = true
+    socialIcons = false
 
-    topText = []
     bottomText = [
-      "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
-      "Hello 4s3ti theme by <a href=\"https://github.com/4s3ti\">4s3ti</a>"
+      "<br/> Powered by <a href=\"http://gohugo.io\">Hugo</a>",
     ]
 
   # Colors for favicons
@@ -77,14 +73,14 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 
   [params.logo]
     logoMark     = ">"
-    logoText     = "$ cd /home/"
+    logoText     = "$ /fullstack.lol"
     logoHomeLink = "/"
     # Set true to remove the logo cursor entirely.
     logoCursorDisabled = false
     # Set to a valid CSS color to change the cursor in the logo.
     logoCursorColor    = "#67a2c9"
     # Set to a valid CSS time value to change the animation duration, "0s" to disable.
-    logoCursorAnimate  = "2s"
+    logoCursorAnimate  = "3s"
 
   # Commento is more than just a comments widget you can embed — 
   # it’s a return to the roots of the internet. 
@@ -111,8 +107,8 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 
   [[params.social]]
     name = "email"
-    url  = "mailto:nobody@example.com"
-    # icon = fa-solid fa-envelope
+    url  = "mailto:10x@fullstack.lol"
+    icon = "fa-solid fa-envelope"
 
   [[params.social]]
     name = "github"
@@ -131,18 +127,18 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     tag      = "tags"
     series   = "series"
 
-[languages]
-  [languages.en.params]
-    title = "Fullstack.lol"
-    subtitle = "Fully Stacked Front to Back."
-    keywords = ""
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-    readOtherPosts = "Read other posts"
+# [languages]
+  # [languages.en.params]
+  #   title = "Fullstack.lol"
+    # subtitle = "Fully Stacked Front to Back."
+    # keywords = ""
+    # copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    # readOtherPosts = "Read other posts"
 
-    [languages.en.params.logo]
-      logoText = "fullstack.lol"
-      logoHomeLink = "/"
-    # or
+    # [languages.en.params.logo]
+    #   logoText = "fullstack.lol"
+      # logoHomeLink = "/"
+    # # or
     #
     # path = "/img/your-example-logo.svg"
     # alt = "Your example logo alt text"
@@ -160,16 +156,20 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   [[menu.main]]
     identifier = "projects"
     name       = "Projects"
-    url        = "#"
+    url        = "/"
+  [[menu.main]]
+    identifier = "experiments"
+    name       = "Experiments"
+    url        = "/"
   [[menu.main]]
     identifier = "melelroser.com"
     name       = "Melroser.com"
     url        = "https://melroser"
     parent     = "projects"
   [[menu.main]]
-    identifier = "tati.ink"
-    name       = "Tati.Fink"
-    url        = "https://tati.ink"
+    identifier = "tatipaints.com"
+    name       = "TatiPaints.com"
+    url        = "https://tatipaints.com"
     parent     = "projects"
   [[menu.main]]
     identifier = "devs.miami"
@@ -181,4 +181,34 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     name       = "Film.Fyi"
     url        = "https://film.fyi"
     parent     = "projects"
+  [[menu.main]]
+    identifier = "rob.rip"
+    name       = "Rob.Rip"
+    url        = "https://rob.rip"
+    parent     = "projects"
+  [[menu.main]]
+    identifier = "jsonresume"
+    name       = "JsonResume"
+    url        = "experiments/jsonresume"
+    parent     = "experiments"
+  [[menu.main]]
+    identifier = "studyguide"
+    name       = "StudyGuide"
+    url        = "experiments/studyguide"
+    parent     = "experiments"
+  [[menu.main]]
+    identifier = "joeslist"
+    name       = "joeslist"
+    url        = "experiments/joeslist"
+    parent     = "experiments"
+  [[menu.main]]
+    identifier = "tati.ink"
+    name       = "Tati.Ink"
+    url        = "experiments/tati.ink"
+    parent     = "experiments"
+  [[menu.main]]
+    identifier = "myblog.me"
+    name       = "MyBlog.Me"
+    url        = "experiments/myblog.me"
+    parent     = "experiments"
 

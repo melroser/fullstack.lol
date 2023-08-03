@@ -1,0 +1,808 @@
+<!doctype html>
+<html>
+	<head>
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	
+	<title>Robert Melrose - CV</title>
+
+	<style>
+	/*! normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css */article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:hover,a:active{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+/* General, overall styling */
+body {
+	background: #F9F9F9;
+	font-size: 0.9em;
+	font-family: 'Lato', sans-serif;
+	margin-bottom: 100px;
+}
+
+em {
+	color: #999;
+}
+
+p {
+	line-height: 1.4;
+}
+
+a {
+	color: #31A6D6;
+}
+
+a:visited {
+	color: #3061A5;
+}
+
+a:hover {
+	color: #3061A5;
+}
+
+ul {
+	margin-bottom: 0;
+}
+section {
+	margin-bottom: 2em;
+}
+
+blockquote {
+	margin: 0;
+	margin-bottom: 1em;
+}
+
+/* End general, overall styling */
+
+/* Header name styling */
+
+header {
+	background: #68B6E3;
+	padding: 50px;
+	margin-bottom: 50px;
+}
+
+header h1 {
+	color: #FFFFFF;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+header h2 {
+	color: #F3F3F3;
+	font-size: 1em;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+/* End header name styling */
+
+/* Set width of main body of CV */
+.container {
+	max-width: 700px;
+	padding: 0 50px;
+	margin: 0 auto;
+}
+
+/* End */
+
+/* Styling Basics (Name, Contact, About, Profiles) */
+
+#basics {
+	margin-bottom: 10px;
+	border-top: 1px #E2E2E2 solid;
+	border-bottom: 1px #E2E2E2 solid;
+}
+#basics h3 {
+	margin-top: 1.5em;
+	margin-bottom: 10px;
+}
+#basics .contact strong {
+	line-height: 1.3;
+	float: left;
+	width: 80px;
+}
+
+.contact h3 {
+	padding-bottom: 10px;
+}
+
+.website,
+.email,
+.phone {
+	margin-bottom: 10px;
+	float: left;
+	width: 50%;
+}
+
+.summary {
+	padding-top: 5px;
+	clear: both;
+}
+
+#profiles {
+	overflow: hidden;
+}
+
+#profiles .item {
+	float: left;
+	width: 50%;
+}
+
+.username{
+	margin-top: 10px;
+}
+
+/* End 'Basics' Styling */
+
+/* Work and volunteering experience styling */
+
+.work_date,
+.work_position,
+.work_website,
+.institution,
+.study_date,
+.qualification {
+	margin-bottom: 10px;
+	float: left;
+	width: 30%;
+}
+
+.courses {
+	clear: both;
+}
+
+.dissertation {
+	margin-top: 10px;
+}
+
+#work,
+#volunteer {
+	padding-bottom: 5px;
+	border-bottom: 1px #E2E2E2 solid;
+}
+
+#work .item,
+#volunteer .item {
+	margin: 25px 0;
+}
+
+/* End work and volunteering */
+
+/* Skills, languages, interests and references styling */
+
+#skills {
+	margin-bottom: 10px;
+	border-bottom: 1px #E2E2E2 solid;
+	padding-bottom: 5px;
+}
+
+#skills .item,
+#languages .item {
+	margin: 0 0 25px 0;
+}
+
+#interests .item {
+	margin-bottom: 25px;
+}
+
+#skills {
+	overflow: hidden;
+}
+
+#languages .item,
+#interests .item,
+#skills .item {
+	float: left;
+	width: 50%;
+}
+
+#references,
+#interests {
+	clear: both;
+}
+
+/* End styling */
+
+	</style>
+	
+	</head>
+	<body>
+	
+	<header>
+	<h1>Robert Melrose</h1>
+	<h2>Laziness is the Mother of Innovation</h2>
+	</header>
+
+	<div id="content" class="container">
+	<section id="basics">
+		<div class="contact">
+		<h3>Contact</h3>
+		<div class="email">
+			<strong>Email</strong>
+			themelroser@gmail.com
+		</div>
+		<div class="phone">
+			<strong>Phone</strong>
+			3037187583
+		</div>
+		</div>
+		<div class="summary">
+			<h3>About</h3>
+			<p>I&#x27;ve been working in software for over a decade mostly web related technologies.
+
+I love to learn. I thrive in working environments where I&#x27;m learning something new or mastering a craft.
+
+Opportunities in the city of Miami (Ideally in Brickell or Downtown) will be given preference. I&#x27;m also open to fully remote positions but would prefer having a hybrid option to come into an office when need arises.</p>
+		</div>
+		<section id="profiles">
+			<div class="item">
+				<strong class="network">
+					LinkedIn
+				</strong>
+				<div class="url">
+					<a href="https://www.linkedin.com/in/themelroser/">
+						themelroser
+					</a>
+				</div>
+			</div>
+		</section>
+	</section>
+
+	<section id="work">
+		<h2>Work</h2>
+		<div class="item">
+			
+			<div class="work_position">
+				Engineer II
+			</div>
+
+			<div class="work_date">
+				<span class="startDate">
+					2015-06-30
+				</span>
+				<span class="endDate">
+					- 2022-12-31
+				</span>
+			</div>
+
+
+
+			<div class="summary">
+				<p>I was promoted to the role of Engineer II.
+
+I left Accelya Group in December of 2022.</p>
+			</div>
+		</div>
+		<div class="item">
+			
+			<div class="work_position">
+				Engineer
+			</div>
+
+			<div class="work_date">
+				<span class="startDate">
+					2020-07-31
+				</span>
+				<span class="endDate">
+					- 2022-07-31
+				</span>
+			</div>
+
+
+
+		</div>
+		<div class="item">
+			
+			<div class="work_position">
+				Software Engineer
+			</div>
+
+			<div class="work_date">
+				<span class="startDate">
+					2018-12-31
+				</span>
+				<span class="endDate">
+					- 2020-07-31
+				</span>
+			</div>
+
+
+
+			<div class="summary">
+				<p>I worked on building a small platform of .NET applications. Farelogix was purchased by Accelya Group in the summer of 2020. During this time I was the technical lead of a small platform of applications. I trained 2 interns/junior developers to work with me on maintaining and expanding the capabilities of the platform. I was eventually promoted to Engineer II in Summer of 2022.</p>
+			</div>
+		</div>
+		<div class="item">
+			
+			<div class="work_position">
+				Junior Software Engineer
+			</div>
+
+			<div class="work_date">
+				<span class="startDate">
+					2015-06-30
+				</span>
+				<span class="endDate">
+					- 2018-12-31
+				</span>
+			</div>
+
+
+
+			<div class="summary">
+				<p>Started out as a backend C++ developer for my first 2 years.</p>
+			</div>
+		</div>
+		<div class="item">
+			
+			<div class="work_position">
+				Contract Software Engineer
+			</div>
+
+			<div class="work_date">
+				<span class="startDate">
+					2015-03-31
+				</span>
+				<span class="endDate">
+					- 2015-06-30
+				</span>
+			</div>
+
+
+
+			<div class="summary">
+				<p>Contract to hire via with the company Farelogix.</p>
+			</div>
+		</div>
+		<div class="item">
+			
+			<div class="work_position">
+				Software Engineer
+			</div>
+
+			<div class="work_date">
+				<span class="startDate">
+					2012-06-30
+				</span>
+				<span class="endDate">
+					- 2014-11-30
+				</span>
+			</div>
+
+
+
+			<div class="summary">
+				<p>Software Engineer working for the reliability department. Majority of work was in Python but also used C++, Java and application development in .NET.</p>
+			</div>
+		</div>
+		<div class="item">
+			
+			<div class="work_position">
+				Web Developer
+			</div>
+
+			<div class="work_date">
+				<span class="startDate">
+					2011-06-30
+				</span>
+				<span class="endDate">
+					- 2012-10-31
+				</span>
+			</div>
+
+
+
+			<div class="summary">
+				<p>Building and maintaining College of Business Website. My first experience working in .NET. This was SharePoint development. Making these things called Web Parts (I suppose looking back they were something in-between an SPA and an iFrame). You could write a part of a UI like a form for user input and it would use C# logic to do something. Then you could drop this widget wherever you wanted on the site. I did some WCF console applications. It was also my first experience with version control specifically TFS. Eventually I was promoted to Team Lead where I gained a little leadership experience delegating tasks to co-workers.</p>
+			</div>
+		</div>
+		<div class="item">
+			
+			<div class="work_position">
+				Web Developer
+			</div>
+
+			<div class="work_date">
+				<span class="startDate">
+					2011-05-31
+				</span>
+				<span class="endDate">
+					- 2012-10-31
+				</span>
+			</div>
+
+
+
+			<div class="summary">
+				<p>Back-end web development, form development, designing and consuming REST Web Services, SharePoint development, making and deploying web parts that interfaced with a database and created cross-platform mobile web apps using jQuery.
+
+Languages used: C#, Asp.Net, java script, jQuery and jQuery mobile.</p>
+			</div>
+		</div>
+		<div class="item">
+			
+			<div class="work_position">
+				Lead Tape Operator
+			</div>
+
+			<div class="work_date">
+				<span class="startDate">
+					2007-01-31
+				</span>
+				<span class="endDate">
+					- 2010-08-31
+				</span>
+			</div>
+
+
+
+			<div class="summary">
+				<p>Worked for OAO (now Pomeroy) doing near-line storage. began as a tape operator was eventually promoted to lead .
+
+Managed a team of about 10 tape operators and performed various other managerial duties.</p>
+			</div>
+		</div>
+	</section>
+
+	
+	<section id="education">
+		<h2>Education</h2>
+		<div class="item">
+			
+			<div class="institution">
+				Colorado State University
+			</div>
+
+			<div class="study_date">
+				<span class="startDate">
+					2008-12-31
+				</span>
+				<span class="endDate">
+					- 2018-12-31
+				</span>
+			</div>
+
+
+
+		</div>
+		<div class="item">
+			
+			<div class="institution">
+				Colorado Mountain College
+			</div>
+
+			<div class="study_date">
+				<span class="startDate">
+					2007-08-31
+				</span>
+				<span class="endDate">
+					- Present
+				</span>
+			</div>
+
+
+
+		</div>
+		<div class="item">
+			
+			<div class="institution">
+				Colorado Mountain College
+			</div>
+
+			<div class="study_date">
+				<span class="startDate">
+					2007-12-31
+				</span>
+				<span class="endDate">
+					- 2009-12-31
+				</span>
+			</div>
+
+
+
+		</div>
+		<div class="item">
+			
+			<div class="institution">
+				Silver Creek Highschool
+			</div>
+
+			<div class="study_date">
+				<span class="startDate">
+					2001-12-31
+				</span>
+				<span class="endDate">
+					- 2007-12-31
+				</span>
+			</div>
+
+
+
+		</div>
+	</section>
+	
+	<section id="skills">
+		<h2>Skills</h2>
+		<div class="item">
+			<div class="name">
+				ASP.NET Core
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Entity Framework
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				AngularJS
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Web Development
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Ruby
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Java
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Mac OS X
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Programming
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				C#
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Microsoft SQL Server
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				jQuery
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				C (Programming Language)
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				JavaScript
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Software Engineering
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Program Development
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Visual Studio
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Parallel Computing
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Red Hat Linux
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Perl
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				SharePoint
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Git
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Python
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Windows
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				ASP.NET MVC
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				C
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Web Services
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				JSON
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Domain Modeling
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Bash
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Mobile Applications
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Computer Security
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Object Oriented Design
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Parallel Programming
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Linux
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				User Experience
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Unix
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Network Security
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Web Applications
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Eclipse
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				ASP.NET
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Entity Framework (EF) Core
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				C++
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Software Development
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Software
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Software Quality Assurance
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Vim
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Representational State Transfer (REST)
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				.NET
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Subversion
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Software Documentation
+			</div>
+		</div>
+	</section>
+
+	<section id="languages">
+		<h2>Languages</h2>
+		<div class="item">
+			<div class="language">
+				English
+			</div>
+			<div class="level">
+				<em>Native Speaker</em>
+			</div>
+		</div>
+	</section>
+
+	
+	<section id="references">
+		<h2>References</h2>
+		<div class="item">
+			<blockquote class="reference">
+				Robert is a highly skilled and motivated programmer. He always stayed on task, and moved forward as fast as he could. He learned very quickly, and always made sure he was doing the job the right way, never just accepting sloppy work.
+
+The biggest thing I took away after working with him is his ability to keep going, keep focused, even while working on a frustrating programming problem. As with most programing, it&#x27;s easy to run into a problem that makes ones head spin with frustration. Robert turned right to Google, books, and colleagues to help figure out the problem quickly. This is a rare trait in programmers.
+
+In short, I am grateful to have worked with Robert. I learned from him. Any prospecting employers would be lucky to have him as an employee.
+			</blockquote>
+			<div class="name">
+				— Adam Menges
+			</div>
+		</div>
+	</section>
+	
+	</div>
+	</body>
+</html>

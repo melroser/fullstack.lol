@@ -8,6 +8,6 @@ hidelanguage = false
   name = "10x"
 +++
 
-I'd rather be left alone but if you can't help yourself send an email to
+I'd rather be left alone but if you can't help yourself i guess send an email to
 
 10x@fullstack.lol
